@@ -21,9 +21,9 @@ import java.io.File;
 @SpringBootApplication
 @EnableAutoConfiguration
 @ServletComponentScan("com.maxrumo")
-public class MainApplication implements EmbeddedServletContainerCustomizer {
+public class Application implements EmbeddedServletContainerCustomizer {
 
-    private static Logger logger = Logger.getLogger(MainApplication.class);
+    private static Logger logger = Logger.getLogger(Application.class);
     @Override
     public void customize(ConfigurableEmbeddedServletContainer container) {
     }
@@ -32,12 +32,6 @@ public class MainApplication implements EmbeddedServletContainerCustomizer {
     @RequestMapping("/index")
     public String index() {
         return "index";
-    }
-
-    @ResponseBody
-    @RequestMapping("/msg")
-    public String msg() {
-        return "this is a msg";
     }
 
     @ResponseBody
@@ -53,7 +47,7 @@ public class MainApplication implements EmbeddedServletContainerCustomizer {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(MainApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 
