@@ -1,19 +1,18 @@
 package com.maxrumo.service.impl;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.maxrumo.entity.User;
 import com.maxrumo.entity.UserExample;
 import com.maxrumo.entity.UserExample.Criteria;
 import com.maxrumo.mapper.UserMapper;
 import com.maxrumo.service.UserService;
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
@@ -71,6 +70,7 @@ public class UserServiceImpl implements UserService {
 			map.put("msg", "昵称已被使用");
 			return map;
 		}
+		userMapper.insert(user);
 		return map;
 	}
 
