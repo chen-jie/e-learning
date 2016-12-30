@@ -1,5 +1,10 @@
 package com.maxrumo;
 
+import java.io.File;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -13,10 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-
 @Controller
 @SpringBootApplication
 @EnableAutoConfiguration
@@ -28,23 +29,6 @@ public class Application implements EmbeddedServletContainerCustomizer {
     public void customize(ConfigurableEmbeddedServletContainer container) {
     }
 
-    @ResponseBody
-    @RequestMapping("/index")
-    public String index() {
-        return "index";
-    }
-
-    @ResponseBody
-    @RequestMapping("/tell")
-    public String tell() {
-        logger.info("info log");
-        logger.error("error log");
-        return "tell context" + getMsg();
-    }
-
-    private String getMsg() {
-        return " this is from jrebel";
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -71,16 +55,12 @@ public class Application implements EmbeddedServletContainerCustomizer {
         }
         return "success";
     }
-/*    @Bean
-    public ServletRegistrationBean servletRegistrationBean(){
-        ServletRegistrationBean bean = new ServletRegistrationBean(new DruidStatViewServlet(), "/druid*//*");
-        bean.addInitParameter("allow","192.168.16.110,127.0.0.1");
-        bean.addInitParameter("loginUsername","admin");
-        bean.addInitParameter("loginPassword","admin");
-        bean.addInitParameter("resetEnable","true");
-        return bean;
-    }
-    @Bean
+//    @Bean
+//    public ServletRegistrationBean servletRegistrationBean(){
+//        ServletRegistrationBean bean = new ServletRegistrationBean(new CaptchaServlet(), "/captcha");
+//        return bean;
+//    }
+    /*@Bean
     public FilterRegistrationBean filtertRegistrationBean(){
         FilterRegistrationBean bean = new FilterRegistrationBean(new DruidStatFilter());
         bean.addUrlPatterns("*//*");
