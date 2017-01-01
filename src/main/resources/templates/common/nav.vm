@@ -1,0 +1,35 @@
+<!--/*******导航栏*******/-->
+<div class="layui-header header">
+    <div class="layui-main">
+        <a class="logo" href="/">
+            <img src="/images/logo.png" alt="分享文档">
+        </a>
+        <ul class="layui-nav">
+            <li class="layui-nav-item">
+                <a href="/">首页</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="/doc/">文档</a>
+            </li>
+        </ul>
+        <div class="nav-user">
+            <a class="unlogin" href="/login/">
+                <i class="iconfont icon-wode"></i>
+            </a>
+            <span>
+                <a href="/toLogin/">登入</a>
+                <a href="/toReg/">注册</a>
+            </span>
+            
+            <!-- 登入后的状态 -->
+            <a class="avatar" th:href="/user/">
+	        	<img src="/images/default_avatar.png" />
+	        	<cite text="">小虾米</cite>
+            </a>
+            <div class="nav">
+	        	<a href="/user/set"><i class="iconfont icon-shezhi"></i>设置</a>
+	        	<a href="/logout"><i class="iconfont icon-tuichu"></i>退了</a>
+            </div>
+        </div>
+    </div>
+</div>
