@@ -2,34 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cf06fdc-4b8e-4f38-8779-d204633bf2da" name="Default" comment="测试">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_generator_mybatis_generator_core_1_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_1_4_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_1_4_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_4_1_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_3_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_3_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/BaseController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/VCodeController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/maxrumo/util/Constant.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/BaseConroller.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__backport_util_concurrent_backport_util_concurrent_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_1_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jsr107cache_jsr107cache_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_2_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/maxrumo/shiro/config/ShiroConfiguration.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/maxrumo/shiro/realm/MyShiroRealm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/maxrumo/util/CommonUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/ehcache-shiro.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/js/custom/utils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-learning.iml" afterPath="$PROJECT_DIR$/e-learning.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e-learning.sql" afterPath="$PROJECT_DIR$/e-learning.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/BaseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/BaseController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/TestController.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/TestController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/maxrumo/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/maxrumo/service/impl/UserServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/layui/css/layui.css" afterPath="$PROJECT_DIR$/src/main/resources/static/layui/css/layui.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/common/head.vm" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/head.vm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/login.vm" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.vm" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_39.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/e-learning.sql" afterPath="$PROJECT_DIR$/e-learning.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/templates/reg.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/reg.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/reg.vm" afterPath="$PROJECT_DIR$/src/main/resources/templates/reg.vm" />
     </list>
     <ignored path="e-learning.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,76 +47,78 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="e-learning" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ShiroConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/shiro/config/ShiroConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="770">
+              <caret line="49" column="36" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="36" />
+              <folding>
+                <element signature="e#2277#2278#0" expanded="false" />
+                <element signature="e#2332#2333#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/controller/TestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#321#322#0" expanded="false" />
+                <element signature="e#350#351#0" expanded="false" />
+                <element signature="e#425#426#0" expanded="false" />
+                <element signature="e#479#480#0" expanded="false" />
+                <element signature="e#554#555#0" expanded="false" />
+                <element signature="e#613#614#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+            <state relative-caret-position="275">
+              <caret line="136" column="34" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyShiroRealm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/shiro/realm/MyShiroRealm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="58" column="93" selection-start-line="58" selection-start-column="93" selection-end-line="58" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2837#2838#0" expanded="true" />
-                <element signature="e#2867#2868#0" expanded="true" />
-                <element signature="e#2923#2924#0" expanded="true" />
-                <element signature="e#2951#2952#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/service/impl/UserServiceImpl.java">
+      <file leaf-file-name="nav.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/nav.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+            <state relative-caret-position="177">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="31" selection-end-column="18" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/entity/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/controller/BaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/util/Constant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reg.vm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/reg.vm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="123" column="23" selection-start-line="123" selection-start-column="23" selection-end-line="123" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#div#6;n#form#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -124,8 +126,8 @@
       <file leaf-file-name="login.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1585">
-              <caret line="79" column="61" selection-start-line="79" selection-start-column="61" selection-end-line="79" selection-end-column="61" />
+            <state relative-caret-position="221">
+              <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -134,28 +136,38 @@
       <file leaf-file-name="head.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/head.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="220">
+              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.vm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/nav.vm">
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="56" />
+            <state relative-caret-position="110">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="reg.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/reg.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            <state relative-caret-position="137">
+              <caret line="62" column="55" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/custom/utils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -185,14 +197,26 @@
         <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/util/Constant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/BaseConroller.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/VCodeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/BaseController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/reg.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.vm" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/common/head.vm" />
-        <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/reg.vm" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/common/nav.vm" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/layui/css/layui.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/ehcache-shiro.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/shiro/config/ShiroConfigruation.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/util/CommonUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/e-learning.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/BaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/shiro/config/ShiroConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/maxrumo/shiro/realm/MyShiroRealm.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/reg.vm" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.vm" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/custom/utils.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/common/head.vm" />
+        <option value="$PROJECT_DIR$/README.txt" />
       </list>
     </option>
   </component>
@@ -209,10 +233,13 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1370" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -240,12 +267,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="e-learning" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -258,9 +290,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="e-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
@@ -271,6 +334,8 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -458,6 +523,7 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
@@ -623,6 +689,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -667,6 +739,12 @@
     </option>
     <option name="fileTypes" value="class;svn-base;svn-work;Extra;gif;png;jpg;jpeg;bmp;tga;tiff;ear;war;zip;jar;iml;iws;ipr;bz2;gz;" />
   </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0cf06fdc-4b8e-4f38-8779-d204633bf2da" name="Default" comment="测试" />
@@ -674,48 +752,58 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1483102918484</updated>
-      <workItem from="1483102934158" duration="7608000" />
+      <workItem from="1483102934158" duration="18081000" />
+      <workItem from="1483197062977" duration="6559000" />
+      <workItem from="1483243221769" duration="1376000" />
     </task>
+    <task id="LOCAL-00001" summary="登录注册功能完成">
+      <created>1483110605955</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1483110605955</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8107000" />
+    <option name="totallyTimeSpent" value="26515000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17348608" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22749591" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2259542" sideWeight="0.49434572" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17348608" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38625205" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27389985" sideWeight="0.49434572" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24156442" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25053304" sideWeight="0.5056543" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel remote servers log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15279879" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1411043" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25053304" sideWeight="0.5056543" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2651391" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel remote servers log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -729,9 +817,14 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="测试" />
+    <MESSAGE value="登录注册功能完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录注册功能完成" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -740,417 +833,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1275#1276#0" expanded="false" />
-            <element signature="e#1337#1338#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/druid/servlet/MyServlet.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/druid/filter/DruidStatFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/druid/servlet/DruidStatViewServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/druid/config/DruidDBConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="83" column="45" selection-start-line="83" selection-start-column="45" selection-end-line="83" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/maxrumo/test/ToutiaoApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="e#871#872#0" expanded="false" />
-            <element signature="e#929#930#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/banner.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1518">
-          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-          <folding>
-            <element signature="e#1275#1276#0" expanded="false" />
-            <element signature="e#1337#1338#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/druid/filter/DruidStatFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/maxrumo/test/ToutiaoApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#871#872#0" expanded="false" />
-            <element signature="e#929#930#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/druid/servlet/DruidStatViewServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://MAVEN/com.maxrumo:elearning:1.0">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MAVEN</ID>
-          <OriginalElement>com.maxrumo:elearning:1.0</OriginalElement>
-          <nodes>
-            <node x="" y="">com.maxrumo:elearning:1.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.1.RELEASE/org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.5</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.1.RELEASE/org.apache.tomcat.embed:tomcat-embed-el:jar:8.5.5</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.1.RELEASE/org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.5.5</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.hibernate:hibernate-validator:jar:5.2.4.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.hibernate:hibernate-validator:jar:5.2.4.Final/javax.validation:validation-api:jar:1.1.0.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.hibernate:hibernate-validator:jar:5.2.4.Final/org.jboss.logging:jboss-logging:jar:3.3.0.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.hibernate:hibernate-validator:jar:5.2.4.Final/com.fasterxml:classmate:jar:1.3.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.8.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.8.3/com.fasterxml.jackson.core:jackson-annotations:jar:2.8.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.8.3/com.fasterxml.jackson.core:jackson-core:jar:2.8.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-web:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-web:jar:4.3.3.RELEASE/org.springframework:spring-aop:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-web:jar:4.3.3.RELEASE/org.springframework:spring-beans:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-web:jar:4.3.3.RELEASE/org.springframework:spring-context:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-webmvc:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-webmvc:jar:4.3.3.RELEASE/org.springframework:spring-expression:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/commons-beanutils:commons-beanutils:jar:1.9.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/commons-collections:commons-collections:jar:3.2.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/commons-digester:commons-digester:jar:2.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity:jar:1.7</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity:jar:1.7/commons-lang:commons-lang:jar:2.4</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/commons-chain:commons-chain:jar:1.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/commons-validator:commons-validator:jar:1.3.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/dom4j:dom4j:jar:1.6.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/dom4j:dom4j:jar:1.6.1/xml-apis:xml-apis:jar:1.4.01</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/oro:oro:jar:2.0.8</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/sslext:sslext:jar:1.2-0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/org.apache.struts:struts-core:jar:1.3.8</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/org.apache.struts:struts-core:jar:1.3.8/antlr:antlr:jar:2.7.7</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/org.apache.struts:struts-taglib:jar:1.3.8</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/org.apache.struts:struts-tiles:jar:1.3.8</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.springframework:spring-context-support:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-test:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-test-autoconfigure:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0/net.minidev:json-smart:jar:2.2.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0/net.minidev:json-smart:jar:2.2.1/net.minidev:accessors-smart:jar:1.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0/net.minidev:json-smart:jar:2.2.1/net.minidev:accessors-smart:jar:1.1/org.ow2.asm:asm:jar:5.0.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0/org.slf4j:slf4j-api:jar:1.7.21</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/junit:junit:jar:4.12</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.assertj:assertj-core:jar:2.5.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.mockito:mockito-core:jar:1.10.19</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.mockito:mockito-core:jar:1.10.19/org.objenesis:objenesis:jar:2.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.hamcrest:hamcrest-core:jar:1.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.hamcrest:hamcrest-library:jar:1.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.skyscreamer:jsonassert:jar:1.3.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.skyscreamer:jsonassert:jar:1.3.0/org.json:json:jar:20140107</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.springframework:spring-core:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.springframework:spring-test:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-autoconfigure:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter:jar:1.4.1.RELEASE/org.yaml:snakeyaml:jar:1.17</node>
-            <node x="" y="">log4j:log4j:jar:1.2.17</node>
-            <node x="" y="">commons-logging:commons-logging:jar:1.2</node>
-            <node x="" y="">mysql:mysql-connector-java:jar:5.1.25</node>
-            <node x="" y="">com.alibaba:druid:jar:1.0.18</node>
-            <node x="" y="">com.alibaba:druid:jar:1.0.18/com.alibaba:jconsole:jar:1.8.0</node>
-            <node x="" y="">com.alibaba:druid:jar:1.0.18/com.alibaba:tools:jar:1.8.0</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0073569482288827" x="570.0" y="260.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>All</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://MAVEN/com.maxrumo:elearning:1.0">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MAVEN</ID>
-          <OriginalElement>com.maxrumo:elearning:1.0</OriginalElement>
-          <nodes>
-            <node x="" y="">com.maxrumo:elearning:1.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.1.RELEASE/org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.5</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.1.RELEASE/org.apache.tomcat.embed:tomcat-embed-el:jar:8.5.5</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.1.RELEASE/org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.5.5</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.hibernate:hibernate-validator:jar:5.2.4.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.hibernate:hibernate-validator:jar:5.2.4.Final/javax.validation:validation-api:jar:1.1.0.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.hibernate:hibernate-validator:jar:5.2.4.Final/org.jboss.logging:jboss-logging:jar:3.3.0.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.hibernate:hibernate-validator:jar:5.2.4.Final/com.fasterxml:classmate:jar:1.3.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.8.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.8.3/com.fasterxml.jackson.core:jackson-annotations:jar:2.8.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.8.3/com.fasterxml.jackson.core:jackson-core:jar:2.8.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-web:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-web:jar:4.3.3.RELEASE/org.springframework:spring-aop:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-web:jar:4.3.3.RELEASE/org.springframework:spring-beans:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-web:jar:4.3.3.RELEASE/org.springframework:spring-context:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-webmvc:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-webmvc:jar:4.3.3.RELEASE/org.springframework:spring-expression:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/commons-beanutils:commons-beanutils:jar:1.9.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/commons-collections:commons-collections:jar:3.2.2</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/commons-digester:commons-digester:jar:2.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity:jar:1.7</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity:jar:1.7/commons-lang:commons-lang:jar:2.4</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/commons-chain:commons-chain:jar:1.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/commons-validator:commons-validator:jar:1.3.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/dom4j:dom4j:jar:1.6.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/dom4j:dom4j:jar:1.6.1/xml-apis:xml-apis:jar:1.4.01</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/oro:oro:jar:2.0.8</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/sslext:sslext:jar:1.2-0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/org.apache.struts:struts-core:jar:1.3.8</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/org.apache.struts:struts-core:jar:1.3.8/antlr:antlr:jar:2.7.7</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/org.apache.struts:struts-taglib:jar:1.3.8</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/org.apache.struts:struts-tiles:jar:1.3.8</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.springframework:spring-context-support:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-test:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-test-autoconfigure:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0/net.minidev:json-smart:jar:2.2.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0/net.minidev:json-smart:jar:2.2.1/net.minidev:accessors-smart:jar:1.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0/net.minidev:json-smart:jar:2.2.1/net.minidev:accessors-smart:jar:1.1/org.ow2.asm:asm:jar:5.0.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0/org.slf4j:slf4j-api:jar:1.7.21</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/junit:junit:jar:4.12</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.assertj:assertj-core:jar:2.5.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.mockito:mockito-core:jar:1.10.19</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.mockito:mockito-core:jar:1.10.19/org.objenesis:objenesis:jar:2.1</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.hamcrest:hamcrest-core:jar:1.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.hamcrest:hamcrest-library:jar:1.3</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.skyscreamer:jsonassert:jar:1.3.0</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.skyscreamer:jsonassert:jar:1.3.0/org.json:json:jar:20140107</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.springframework:spring-core:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.springframework:spring-test:jar:4.3.3.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-autoconfigure:jar:1.4.1.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter:jar:1.4.1.RELEASE/org.yaml:snakeyaml:jar:1.17</node>
-            <node x="" y="">log4j:log4j:jar:1.2.17</node>
-            <node x="" y="">commons-logging:commons-logging:jar:1.2</node>
-            <node x="" y="">mysql:mysql-connector-java:jar:5.1.25</node>
-            <node x="" y="">com.alibaba:druid:jar:1.0.18</node>
-            <node x="" y="">com.alibaba:druid:jar:1.0.18/com.alibaba:jconsole:jar:1.8.0</node>
-            <node x="" y="">com.alibaba:druid:jar:1.0.18/com.alibaba:tools:jar:1.8.0</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0073569482288827" x="570.0" y="260.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>All</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/1.4.1.RELEASE/spring-boot-1.4.1.RELEASE-sources.jar!/org/springframework/boot/web/servlet/FilterRegistrationBean.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/druid/filter/DruidStatFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/com/maxrumo/test/ToutiaoApplicationTestsTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/druid/servlet/MyServlet.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.4.1.RELEASE/spring-boot-autoconfigure-1.4.1.RELEASE.jar!/org/springframework/boot/autoconfigure/EnableAutoConfiguration.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.4.1.RELEASE/spring-boot-autoconfigure-1.4.1.RELEASE.jar!/org/springframework/boot/autoconfigure/EnableAutoConfigurationImportSelector.class" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.4.1.RELEASE/spring-boot-autoconfigure-1.4.1.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/ImportAutoConfigurationImportSelector.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.4.1.RELEASE/spring-boot-autoconfigure-1.4.1.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/EnableAutoConfigurationImportSelector.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.4.1.RELEASE/spring-boot-autoconfigure-1.4.1.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/EnableAutoConfiguration.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/1.4.1.RELEASE/spring-boot-1.4.1.RELEASE-sources.jar!/org/springframework/boot/context/embedded/EmbeddedServletContainerCustomizer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1606">
-          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/maxrumo/test/ToutiaoApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-          <folding>
-            <element signature="e#871#872#0" expanded="false" />
-            <element signature="e#929#930#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/druid/config/DruidDBConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#1275#1276#0" expanded="false" />
-            <element signature="e#1337#1338#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/druid/servlet/DruidStatViewServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/controller/TestController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/banner.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/e-learning.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e-learning.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/nav.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,7 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1166,23 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/controller/VCodeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1304">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/head.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1194,29 +862,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1585">
-          <caret line="79" column="61" selection-start-line="79" selection-start-column="61" selection-end-line="79" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/reg.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="123" column="23" selection-start-line="123" selection-start-column="23" selection-end-line="123" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#6;n#form#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1224,28 +873,512 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/layui/css/layui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="1" column="10396" selection-start-line="1" selection-start-column="10396" selection-end-line="1" selection-end-column="10396" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/controller/VCodeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1459">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-spring/1.2.2/shiro-spring-1.2.2.jar!/org/apache/shiro/spring/web/ShiroFilterFactoryBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/com.maxrumo:e-learning:1.0">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.maxrumo:e-learning:1.0</OriginalElement>
+          <nodes>
+            <node x="" y="">com.maxrumo:e-learning:1.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.1.RELEASE/org.apache.tomcat.embed:tomcat-embed-core:jar:8.5.5</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.1.RELEASE/org.apache.tomcat.embed:tomcat-embed-el:jar:8.5.5</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:1.4.1.RELEASE/org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.5.5</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.hibernate:hibernate-validator:jar:5.2.4.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.hibernate:hibernate-validator:jar:5.2.4.Final/javax.validation:validation-api:jar:1.1.0.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.hibernate:hibernate-validator:jar:5.2.4.Final/org.jboss.logging:jboss-logging:jar:3.3.0.Final</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.hibernate:hibernate-validator:jar:5.2.4.Final/com.fasterxml:classmate:jar:1.3.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.8.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.8.3/com.fasterxml.jackson.core:jackson-annotations:jar:2.8.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.8.3/com.fasterxml.jackson.core:jackson-core:jar:2.8.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-web:jar:4.3.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-web:jar:4.3.3.RELEASE/org.springframework:spring-aop:jar:4.3.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-web:jar:4.3.3.RELEASE/org.springframework:spring-beans:jar:4.3.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-web:jar:4.3.3.RELEASE/org.springframework:spring-context:jar:4.3.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-webmvc:jar:4.3.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-web:jar:1.4.1.RELEASE/org.springframework:spring-webmvc:jar:4.3.3.RELEASE/org.springframework:spring-expression:jar:4.3.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/commons-beanutils:commons-beanutils:jar:1.9.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/commons-collections:commons-collections:jar:3.2.2</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/commons-digester:commons-digester:jar:2.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity:jar:1.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity:jar:1.7/commons-lang:commons-lang:jar:2.4</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/commons-chain:commons-chain:jar:1.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/commons-validator:commons-validator:jar:1.3.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/dom4j:dom4j:jar:1.6.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/dom4j:dom4j:jar:1.6.1/xml-apis:xml-apis:jar:1.4.01</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/oro:oro:jar:2.0.8</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/sslext:sslext:jar:1.2-0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/org.apache.struts:struts-core:jar:1.3.8</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/org.apache.struts:struts-core:jar:1.3.8/antlr:antlr:jar:2.7.7</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/org.apache.struts:struts-taglib:jar:1.3.8</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.apache.velocity:velocity-tools:jar:2.0/org.apache.struts:struts-tiles:jar:1.3.8</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-velocity:jar:1.4.1.RELEASE/org.springframework:spring-context-support:jar:4.3.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-actuator:jar:1.4.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-actuator:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-actuator:jar:1.4.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-test:jar:1.4.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-test-autoconfigure:jar:1.4.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0/net.minidev:json-smart:jar:2.2.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0/net.minidev:json-smart:jar:2.2.1/net.minidev:accessors-smart:jar:1.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0/net.minidev:json-smart:jar:2.2.1/net.minidev:accessors-smart:jar:1.1/org.ow2.asm:asm:jar:5.0.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/com.jayway.jsonpath:json-path:jar:2.2.0/org.slf4j:slf4j-api:jar:1.7.21</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/junit:junit:jar:4.12</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.assertj:assertj-core:jar:2.5.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.mockito:mockito-core:jar:1.10.19</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.mockito:mockito-core:jar:1.10.19/org.objenesis:objenesis:jar:2.1</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.hamcrest:hamcrest-core:jar:1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.hamcrest:hamcrest-library:jar:1.3</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.skyscreamer:jsonassert:jar:1.3.0</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.skyscreamer:jsonassert:jar:1.3.0/org.json:json:jar:20140107</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.springframework:spring-core:jar:4.3.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter-test:jar:1.4.1.RELEASE/org.springframework:spring-test:jar:4.3.3.RELEASE</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.1.1</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.1.1/org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.1.1</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.1.1/org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.1.1/org.mybatis:mybatis:jar:3.4.0</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.1.1/org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.1.1/org.mybatis:mybatis-spring:jar:1.3.0</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.1.1/org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.1.1/org.springframework.boot:spring-boot-starter-jdbc:jar:1.4.1.RELEASE</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.1.1/org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.1.1/org.springframework.boot:spring-boot-starter-jdbc:jar:1.4.1.RELEASE/org.apache.tomcat:tomcat-jdbc:jar:8.5.5</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.1.1/org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.1.1/org.springframework.boot:spring-boot-starter-jdbc:jar:1.4.1.RELEASE/org.apache.tomcat:tomcat-jdbc:jar:8.5.5/org.apache.tomcat:tomcat-juli:jar:8.5.5</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.1.1/org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.1.1/org.springframework.boot:spring-boot-starter-jdbc:jar:1.4.1.RELEASE/org.springframework:spring-jdbc:jar:4.3.3.RELEASE</node>
+            <node x="" y="">org.mybatis.spring.boot:mybatis-spring-boot-starter:jar:1.1.1/org.mybatis.spring.boot:mybatis-spring-boot-autoconfigure:jar:1.1.1/org.springframework.boot:spring-boot-starter-jdbc:jar:1.4.1.RELEASE/org.springframework:spring-jdbc:jar:4.3.3.RELEASE/org.springframework:spring-tx:jar:4.3.3.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter:jar:1.4.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot:jar:1.4.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter:jar:1.4.1.RELEASE/org.springframework.boot:spring-boot-autoconfigure:jar:1.4.1.RELEASE</node>
+            <node x="" y="">org.springframework.boot:spring-boot-starter:jar:1.4.1.RELEASE/org.yaml:snakeyaml:jar:1.17</node>
+            <node x="" y="">log4j:log4j:jar:1.2.17</node>
+            <node x="" y="">commons-logging:commons-logging:jar:1.2</node>
+            <node x="" y="">mysql:mysql-connector-java:jar:5.1.39</node>
+            <node x="" y="">com.alibaba:druid:jar:1.0.18</node>
+            <node x="" y="">com.alibaba:druid:jar:1.0.18/com.alibaba:jconsole:jar:1.8.0</node>
+            <node x="" y="">com.alibaba:druid:jar:1.0.18/com.alibaba:tools:jar:1.8.0</node>
+            <node x="" y="">org.mybatis.generator:mybatis-generator-core:jar:1.3.3</node>
+            <node x="" y="">org.apache.shiro:shiro-spring:jar:1.2.2</node>
+            <node x="" y="">org.apache.shiro:shiro-spring:jar:1.2.2/org.apache.shiro:shiro-core:jar:1.2.2</node>
+            <node x="" y="">org.apache.shiro:shiro-spring:jar:1.2.2/org.apache.shiro:shiro-web:jar:1.2.2</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.720345744680851" x="817.0" y="1997.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.3.RELEASE/spring-web-4.3.3.RELEASE.jar!/org/springframework/web/filter/GenericFilterBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.3.RELEASE/spring-beans-4.3.3.RELEASE.jar!/org/springframework/beans/factory/FactoryBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.3.RELEASE/spring-beans-4.3.3.RELEASE.jar!/org/springframework/beans/factory/config/BeanPostProcessor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.5/tomcat-embed-core-8.5.5.jar!/javax/servlet/Filter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2-sources.jar!/org/apache/shiro/web/filter/PathMatchingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2-sources.jar!/org/apache/shiro/web/filter/AccessControlFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="176" column="19" selection-start-line="176" selection-start-column="19" selection-end-line="176" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.springframework.web.filter.DelegatingFilterProxy">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.springframework.web.filter.DelegatingFilterProxy</OriginalElement>
+          <nodes>
+            <node x="" y="">org.springframework.web.context.ServletContextAware</node>
+            <node x="" y="">org.springframework.web.filter.DelegatingFilterProxy</node>
+            <node x="" y="">org.springframework.context.EnvironmentAware</node>
+            <node x="" y="">org.springframework.beans.factory.DisposableBean</node>
+            <node x="" y="">org.springframework.web.filter.GenericFilterBean</node>
+            <node x="" y="">org.springframework.beans.factory.Aware</node>
+            <node x="" y="">javax.servlet.Filter</node>
+            <node x="" y="">org.springframework.beans.factory.BeanNameAware</node>
+            <node x="" y="">org.springframework.beans.factory.InitializingBean</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="366.0" y="142.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.apache.shiro.web.filter.authc.AnonymousFilter">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.apache.shiro.web.filter.authc.AnonymousFilter</OriginalElement>
+          <nodes>
+            <node x="" y="">org.apache.shiro.web.servlet.OncePerRequestFilter</node>
+            <node x="" y="">org.apache.shiro.web.servlet.AbstractFilter</node>
+            <node x="" y="">org.apache.shiro.web.servlet.NameableFilter</node>
+            <node x="" y="">org.apache.shiro.web.servlet.AdviceFilter</node>
+            <node x="" y="">org.apache.shiro.web.filter.PathConfigProcessor</node>
+            <node x="" y="">org.apache.shiro.web.servlet.ServletContextSupport</node>
+            <node x="" y="">org.apache.shiro.web.filter.authc.AnonymousFilter</node>
+            <node x="" y="">org.apache.shiro.web.filter.PathMatchingFilter</node>
+            <node x="" y="">org.apache.shiro.util.Nameable</node>
+            <node x="" y="">javax.servlet.Filter</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.690566037735849" x="164.0" y="155.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.apache.shiro.web.servlet.AbstractShiroFilter">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.apache.shiro.web.servlet.AbstractShiroFilter</OriginalElement>
+          <nodes>
+            <node x="" y="">org.apache.shiro.web.servlet.OncePerRequestFilter</node>
+            <node x="" y="">org.apache.shiro.web.servlet.AbstractFilter</node>
+            <node x="" y="">org.apache.shiro.web.servlet.NameableFilter</node>
+            <node x="" y="">org.apache.shiro.web.servlet.AbstractShiroFilter</node>
+            <node x="" y="">org.apache.shiro.web.servlet.ServletContextSupport</node>
+            <node x="" y="">org.apache.shiro.util.Nameable</node>
+            <node x="" y="">javax.servlet.Filter</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="131.0" y="175.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2-sources.jar!/org/apache/shiro/web/filter/authc/AnonymousFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/org.apache.shiro.spring.web.ShiroFilterFactoryBean.SpringShiroFilter">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>org.apache.shiro.spring.web.ShiroFilterFactoryBean.SpringShiroFilter</OriginalElement>
+          <nodes>
+            <node x="" y="">org.apache.shiro.web.servlet.OncePerRequestFilter</node>
+            <node x="" y="">org.apache.shiro.web.servlet.AbstractFilter</node>
+            <node x="" y="">org.apache.shiro.web.servlet.NameableFilter</node>
+            <node x="" y="">org.apache.shiro.web.servlet.AbstractShiroFilter</node>
+            <node x="" y="">org.apache.shiro.web.servlet.ServletContextSupport</node>
+            <node x="" y="">org.apache.shiro.spring.web.ShiroFilterFactoryBean.SpringShiroFilter</node>
+            <node x="" y="">org.apache.shiro.util.Nameable</node>
+            <node x="" y="">javax.servlet.Filter</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8133333333333334" x="131.0" y="215.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2-sources.jar!/org/apache/shiro/web/servlet/OncePerRequestFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2-sources.jar!/org/apache/shiro/web/servlet/AbstractShiroFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="73" column="57" selection-start-line="73" selection-start-column="57" selection-end-line="73" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.3.RELEASE/spring-web-4.3.3.RELEASE.jar!/org/springframework/web/filter/DelegatingFilterProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="150" column="19" selection-start-line="150" selection-start-column="19" selection-end-line="150" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.3.RELEASE/spring-web-4.3.3.RELEASE-sources.jar!/org/springframework/web/filter/DelegatingFilterProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6710">
+          <caret line="341" column="19" selection-start-line="341" selection-start-column="19" selection-end-line="341" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2-sources.jar!/org/apache/shiro/web/filter/authc/UserFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2.jar!/org/apache/shiro/web/filter/mgt/DefaultFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2-sources.jar!/org/apache/shiro/web/filter/mgt/DefaultFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ehcache-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/controller/LoginController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2-sources.jar!/org/apache/shiro/web/filter/authc/FormAuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2837#2838#0" expanded="true" />
-            <element signature="e#2867#2868#0" expanded="true" />
-            <element signature="e#2923#2924#0" expanded="true" />
-            <element signature="e#2951#2952#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1035">
+          <caret line="64" column="61" selection-start-line="64" selection-start-column="61" selection-end-line="64" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/util/CommonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="73" column="58" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e-learning.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2-sources.jar!/org/apache/shiro/web/filter/mgt/DefaultFilterChainManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2200">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-web/1.2.2/shiro-web-1.2.2-sources.jar!/org/apache/shiro/web/filter/authc/AuthenticatingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1184">
+          <caret line="64" column="55" selection-start-line="64" selection-start-column="55" selection-end-line="64" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#321#322#0" expanded="false" />
+            <element signature="e#350#351#0" expanded="false" />
+            <element signature="e#425#426#0" expanded="false" />
+            <element signature="e#479#480#0" expanded="false" />
+            <element signature="e#554#555#0" expanded="false" />
+            <element signature="e#613#614#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-spring/1.2.2/shiro-spring-1.2.2-sources.jar!/org/apache/shiro/spring/web/ShiroFilterFactoryBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/shiro/config/ShiroConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="36" />
+          <folding>
+            <element signature="e#2277#2278#0" expanded="false" />
+            <element signature="e#2332#2333#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.2.2/shiro-core-1.2.2-sources.jar!/org/apache/shiro/realm/AuthorizingRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="340" column="0" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="136" column="34" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/maxrumo/shiro/realm/MyShiroRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="58" column="93" selection-start-line="58" selection-start-column="93" selection-end-line="58" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/nav.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="31" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/mods/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7126">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1483102909747" expanded="true" signature="2548:2561" ph="..." />
+            <marker date="1483102909747" expanded="true" signature="3034:3053" ph="..." />
+            <marker date="1483102909747" expanded="true" signature="5934:5946" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/reg.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="62" column="55" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/custom/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/common/head.vm">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1338,5 +1471,8 @@
         </settings>
       </state>
     </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="" />
   </component>
 </project>

@@ -8,3 +8,4 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_kmnlys78h75bfbt9.css" media="all"/>
 <script src="/js/jquery/jquery-2.1.1.min.js"></script>
 <script src="/js/layer/layer.js"></script>
+<script src="/js/custom/utils.js"></script>

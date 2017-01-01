@@ -60,7 +60,7 @@
                     <div class="layui-inline">
                         <div class="layui-form-mid layui-word-aux">
                             <img id="vcode" src="/vcode" />
-                            <a href="javascript:void(0))" onclick="changeImg()">换一张</a>
+                            <a href="javascript:void(0)" onclick="changeImg()">换一张</a>
                         </div>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ layui.use(['layer', 'element', 'form'], function(){
             type: 'post',
             dataType: 'json',
             data: data.field,
-            url: 'register',
+            url: '/register',
             success: function(res){
                 if(res.status === 0) {
                     layer.alert('注册成功!',{icon:1},function(){

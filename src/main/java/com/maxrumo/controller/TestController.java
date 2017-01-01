@@ -12,4 +12,16 @@ public class TestController {
     public String test(){
         return "test";
     }
+
+    @ResponseBody
+    @RequestMapping("test1")
+    public String test1(){
+        return "test1 requrie permisong test1";
+    }
+
+    @ResponseBody
+    @RequestMapping("test2")
+    public String test2(){
+        return "test1 requrie permisong test/test2";
+    }
 }

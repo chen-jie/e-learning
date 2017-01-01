@@ -5,6 +5,7 @@ import com.maxrumo.entity.UserExample;
 import com.maxrumo.entity.UserExample.Criteria;
 import com.maxrumo.mapper.UserMapper;
 import com.maxrumo.service.UserService;
+import com.maxrumo.util.CommonUtil;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,6 +71,7 @@ public class UserServiceImpl implements UserService {
 			map.put("msg", "昵称已被使用");
 			return map;
 		}
+		user.setPassword(CommonUtil.MD5(user.getPassword()));
 		userMapper.insert(user);
 		return map;
 	}

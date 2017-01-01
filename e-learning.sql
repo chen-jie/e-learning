@@ -74,7 +74,7 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户ID自动递增',
   `username` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `password` varchar(64) NOT NULL,
   `nickname` varchar(20) NOT NULL COMMENT '昵称',
   `email` varchar(50) NOT NULL,
   `avatar` varchar(100) DEFAULT NULL COMMENT '头像地址',
@@ -85,7 +85,7 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'admin', 'admin', '如墨', '737050283@qq.com', null);
+INSERT INTO `user` VALUES ('1', 'admin', '21232f297a57a5a743894a0e4a801fc3', '如墨', '737050283@qq.com', null);
 
 -- ----------------------------
 -- Table structure for `user_role`

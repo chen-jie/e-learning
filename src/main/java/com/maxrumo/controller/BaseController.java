@@ -3,6 +3,8 @@ package com.maxrumo.controller;
 import com.maxrumo.util.JsonTool;
 import com.maxrumo.vo.ResultVo;
 import org.apache.commons.lang.StringUtils;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.session.Session;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -59,4 +61,7 @@ public class BaseController {
 		return vo;
 	}
 
+	protected Session getSession(){
+		return SecurityUtils.getSubject().getSession();
+	}
 }
