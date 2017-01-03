@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>注册</title>
-    #parse("/common/head.vm")
+    #parse("common/head.vm")
     <style type="text/css">
     .header {top: 0; box-shadow: 0 1px 12px rgba(16, 6, 25, 0.2); z-index: 999;}
     .main {width: 450px; min-height: 342px; margin: 4rem auto 4.2rem; padding: 1rem 3.25rem 1.2rem; background: #ffffff;}
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-#parse("/common/nav.vm")
+#parse("common/nav.vm")
 <section style="background: #e5e8ec;overflow: hidden;padding-top: 65px;">
     <div class="main layui-clear">
         <h2 class="page-title">注册</h2> 
@@ -72,7 +72,7 @@
     </div>
 </section>
 
-#parse("/common/footer.vm")
+#parse("common/footer.vm")
 </body>
 <script src="/layui/layui.js"></script>
 <script inline="javascript">
