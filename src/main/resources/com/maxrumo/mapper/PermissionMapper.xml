@@ -153,4 +153,14 @@
       url = #{url,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="findByUsername" parameterType="String" resultMap="BaseResultMap">
+   SELECT DISTINCT permission.*
+	FROM user_role,
+	     user,
+	     permission,
+	     role_permission
+	WHERE `user`.username = 'admin'
+	  AND user_role.user_id = user.id
+	  AND user_role.role_id = role_permission.role_id
+  </select>
 </mapper>

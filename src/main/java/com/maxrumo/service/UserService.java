@@ -12,6 +12,8 @@ public interface UserService {
 	
 	public User getById(Integer id);
 	
+	public User findByUsername(String username); 
+	
 	public boolean isUsernameExist(String username);
 	
 	public boolean isEmailExist(String email);

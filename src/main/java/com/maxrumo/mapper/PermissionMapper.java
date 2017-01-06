@@ -2,8 +2,12 @@ package com.maxrumo.mapper;
 
 import com.maxrumo.entity.Permission;
 import com.maxrumo.entity.PermissionExample;
+
 import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
 public interface PermissionMapper {
     int countByExample(PermissionExample example);
 
@@ -20,4 +24,6 @@ public interface PermissionMapper {
     int updateByPrimaryKeySelective(Permission record);
 
     int updateByPrimaryKey(Permission record);
+
+	List<Permission> findByUsername(String username);
 }

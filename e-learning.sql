@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2016-12-30 18:10:55
+Date: 2017-01-06 15:08:04
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,14 +24,18 @@ CREATE TABLE `permission` (
   `name` varchar(20) NOT NULL,
   `type` varchar(10) NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
-  `code` varchar(20) DEFAULT NULL,
-  `url` varchar(100) DEFAULT NULL,
+  `code` varchar(20) DEFAULT 'null',
+  `url` varchar(100) DEFAULT 'null',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of permission
 -- ----------------------------
+INSERT INTO `permission` VALUES ('1', '权限管理', 'menu', null, 'null', 'null');
+INSERT INTO `permission` VALUES ('2', '资源管理', 'menu', '1', 'admin/perm', 'admin/perm');
+INSERT INTO `permission` VALUES ('3', '角色管理', 'menu', '1', 'admin/role', 'admin/role');
+INSERT INTO `permission` VALUES ('4', '用户管理', 'menu', '1', 'admin/user', 'admin/user');
 
 -- ----------------------------
 -- Table structure for `role`
@@ -61,11 +65,15 @@ CREATE TABLE `role_permission` (
   `role_id` int(11) NOT NULL,
   `permission_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of role_permission
 -- ----------------------------
+INSERT INTO `role_permission` VALUES ('1', '1', '1');
+INSERT INTO `role_permission` VALUES ('2', '1', '2');
+INSERT INTO `role_permission` VALUES ('3', '1', '3');
+INSERT INTO `role_permission` VALUES ('4', '1', '4');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -96,8 +104,9 @@ CREATE TABLE `user_role` (
   `role_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (` id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_role
 -- ----------------------------
+INSERT INTO `user_role` VALUES ('1', '1', '1');

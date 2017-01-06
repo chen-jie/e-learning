@@ -60,7 +60,7 @@
 
 #parse("common/footer.vm")
 </body>
-<script src="/layui/layui.js"></script>
+<script src="/static/layui/layui.js"></script>
 <script inline="javascript">
 layui.use(['layer', 'element', 'form'], function(){
     var $ = layui.jquery

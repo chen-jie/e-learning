@@ -6,6 +6,7 @@ import com.maxrumo.entity.UserExample.Criteria;
 import com.maxrumo.mapper.UserMapper;
 import com.maxrumo.service.UserService;
 import com.maxrumo.util.CommonUtil;
+
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Service("userService")
+@Service
 public class UserServiceImpl implements UserService {
 
 	@Autowired
@@ -79,6 +80,18 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User getById(Integer id) {
 		return userMapper.selectByPrimaryKey(id);
+	}
+
+	@Override
+	public User findByUsername(String username) {
+		UserExample example = new UserExample();
+		Criteria criteria = example.createCriteria();
+		criteria.andUsernameEqualTo(username);
+		List<User> result = userMapper.selectByExample(example);
+		if(CollectionUtils.isNotEmpty(result)){
+			return result.get(0);
+		}
+		return null;
 	}
 
 	@Override
