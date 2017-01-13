@@ -5,7 +5,6 @@ import java.io.File;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
@@ -22,7 +21,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @SpringBootApplication
 public class Application extends WebMvcConfigurerAdapter implements EmbeddedServletContainerCustomizer {
 
-    private static Logger logger = Logger.getLogger(Application.class);
+//    private static Logger logger = Logger.getLogger(Application.class);
     @Override
     public void customize(ConfigurableEmbeddedServletContainer container) {
     }

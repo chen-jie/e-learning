@@ -28,10 +28,7 @@ public class UserServiceImpl implements UserService {
 		criteria.andUsernameEqualTo(username);
 		criteria.andPasswordEqualTo(password);
 		List<User> list = userMapper.selectByExample(example);
-		if(CollectionUtils.isEmpty(list)){
-			return null;
-		}
-		return list.get(0);
+		return CommonUtil.getFirst(list);
 	}
 
 	@Override
@@ -88,10 +85,7 @@ public class UserServiceImpl implements UserService {
 		Criteria criteria = example.createCriteria();
 		criteria.andUsernameEqualTo(username);
 		List<User> result = userMapper.selectByExample(example);
-		if(CollectionUtils.isNotEmpty(result)){
-			return result.get(0);
-		}
-		return null;
+		return CommonUtil.getFirst(result);
 	}
 
 	@Override

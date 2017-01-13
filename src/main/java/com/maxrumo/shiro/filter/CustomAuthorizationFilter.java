@@ -57,7 +57,7 @@ public class CustomAuthorizationFilter extends AuthorizationFilter {
             if(permitted){
             	msg = MSG_SUCCESS;
             }
-            logger.warn(String.format("%s:用户【%s】访问权限资源:%s",msg,username,uri));
+            logger.info(String.format("%s:用户【%s】访问权限资源:%s",msg,username,uri));
         }
         return permitted;
 	}

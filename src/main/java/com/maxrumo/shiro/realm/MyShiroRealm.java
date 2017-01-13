@@ -3,6 +3,7 @@ package com.maxrumo.shiro.realm;
 import java.util.List;
 
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -17,7 +18,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.maxrumo.entity.Permission;
 import com.maxrumo.entity.Role;
 import com.maxrumo.entity.User;
-import com.maxrumo.mapper.PermissionMapper;
 import com.maxrumo.service.PermissionService;
 import com.maxrumo.service.RoleService;
 import com.maxrumo.service.UserService;
@@ -38,6 +38,28 @@ public class MyShiroRealm extends AuthorizingRealm {
 	@Autowired
 	private PermissionService permissionService;
 
+	
+	/**
+	 * 认证方法，登录
+	 *
+	 * @param authenticationToken
+	 * @return
+	 * @throws AuthenticationException
+	 */
+	@Override
+	protected AuthenticationInfo doGetAuthenticationInfo(
+			AuthenticationToken authenticationToken)
+			throws AuthenticationException {
+		UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
+		String username = token.getUsername();
+		User user = userService.findByUsername(username);
+		if (user == null) {
+			return null;
+		}
+		return new SimpleAuthenticationInfo(user.getUsername(),
+				user.getPassword(), getName());
+	}
+	
 	/**
 	 * 授权方法，鉴别权限,从数据库中查询并加入ehcache缓存中
 	 *
@@ -72,29 +94,11 @@ public class MyShiroRealm extends AuthorizingRealm {
 		}
 		if(CollectionUtils.isNotEmpty(permissions)){
 			for(Permission perm : permissions){
-				simpleAuthorizationInfo.addStringPermission(perm.getCode());
+				if(StringUtils.isNotBlank(perm.getCode())){
+					simpleAuthorizationInfo.addStringPermission(perm.getCode());
+				}
 			}
 		}
 	}
 
-	/**
-	 * 认证方法，登录
-	 *
-	 * @param authenticationToken
-	 * @return
-	 * @throws AuthenticationException
-	 */
-	@Override
-	protected AuthenticationInfo doGetAuthenticationInfo(
-			AuthenticationToken authenticationToken)
-			throws AuthenticationException {
-		UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
-		String username = token.getUsername();
-		User user = userService.findByUsername(username);
-		if (user == null) {
-			return null;
-		}
-		return new SimpleAuthenticationInfo(user.getUsername(),
-				user.getPassword(), getName());
-	}
 }

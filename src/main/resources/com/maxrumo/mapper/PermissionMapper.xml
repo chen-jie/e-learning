@@ -163,4 +163,23 @@
 	  AND user_role.user_id = user.id
 	  AND user_role.role_id = role_permission.role_id
   </select>
+  <select id="findAllTree" resultMap="BaseResultMapWithChildren">
+  	SELECT * 
+  	FROM permission 
+  	WHERE parent_id IS null;
+  </select>
+  <select id="findByParentId" parameterType="int" resultMap="BaseResultMapWithChildren">
+  	SELECT * 
+  	FROM permission
+  	WHERE parent_id = #{parentId}
+  </select>
+  <resultMap id="BaseResultMapWithChildren" type="com.maxrumo.entity.Permission">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="parent_id" jdbcType="INTEGER" property="parentId" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <collection property="children" select="findByParentId" ofType="com.maxrumo.entity.Permission" column="id"></collection>
+  </resultMap>
 </mapper>
