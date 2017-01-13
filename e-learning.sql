@@ -24,15 +24,15 @@ CREATE TABLE `permission` (
   `name` varchar(20) NOT NULL,
   `type` varchar(10) NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
-  `code` varchar(20) DEFAULT 'null',
-  `url` varchar(100) DEFAULT 'null',
+  `code` varchar(20) DEFAULT NULL,
+  `url` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of permission
 -- ----------------------------
-INSERT INTO `permission` VALUES ('1', '权限管理', 'menu', null, 'null', 'null');
+INSERT INTO `permission` VALUES ('1', '权限管理', 'menu', null, null, null);
 INSERT INTO `permission` VALUES ('2', '资源管理', 'menu', '1', 'admin/perm', 'admin/perm');
 INSERT INTO `permission` VALUES ('3', '角色管理', 'menu', '1', 'admin/role', 'admin/role');
 INSERT INTO `permission` VALUES ('4', '用户管理', 'menu', '1', 'admin/user', 'admin/user');
