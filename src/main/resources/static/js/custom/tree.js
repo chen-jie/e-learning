@@ -97,11 +97,15 @@ function proccess(cmd,id){
 		        ,btn: ['确定', '取消']
 		 		,yes:function(){
 		 			var param = $('#form_').serialize();
-		 			param+='&parentId='+parentId+"&id="+id+"&code="+code;
+		 			param+="&id="+id+"&code="+code;
+		 			if(parentId != undefined){
+		 				param+='&parentId='+parentId;
+		 			}
 		 			$.ajax({
 		 				url : '/admin/perm/edit',
 		 				type: 'post',
 		 				data: param,
+		 				dataType:'json',
 		 				success: function(res){
 		 	                if(res.status === 0) {
 		 	                    layer.alert(res.msg,function(){
