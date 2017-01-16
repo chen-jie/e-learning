@@ -12,8 +12,6 @@ import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -29,8 +27,6 @@ import com.maxrumo.shiro.realm.MyShiroRealm;
  */
 @Configuration
 public class ShiroConfiguration {
-
-    private static final Logger logger = LoggerFactory.getLogger(ShiroConfiguration.class);
 
     @Bean
     @DependsOn("lifecycleBeanPostProcessor")
@@ -111,7 +107,8 @@ public class ShiroConfiguration {
         filterChainDefinitionMap.put("/toLogin", "anon");  			//登录页面
         filterChainDefinitionMap.put("/logout", "authc");
         filterChainDefinitionMap.put("/toReg", "anon");  			//注册页面
-        filterChainDefinitionMap.put("/reg", "anon");    			//注册请求地址
+        filterChainDefinitionMap.put("/register", "anon");    		//注册请求地址
+        filterChainDefinitionMap.put("/validate*", "anon");    		//注册ajax请求验证
         filterChainDefinitionMap.put("/", "authc");					//登录才能查看首页
         filterChainDefinitionMap.put("/index", "authc");
         filterChainDefinitionMap.put("/error/**", "anon");			//错误页面

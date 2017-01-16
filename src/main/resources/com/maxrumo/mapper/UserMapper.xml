@@ -66,11 +66,11 @@
     delete from user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.maxrumo.entity.User">
-    insert into user (id, username, password, 
+  <insert id="insert" parameterType="com.maxrumo.entity.User" useGeneratedKeys="true" keyProperty="id">
+    insert into user (username, password, 
       nickname, email, avatar
       )
-    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+    values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{nickname,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{avatar,jdbcType=VARCHAR}
       )
   </insert>

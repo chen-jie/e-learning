@@ -1,26 +1,33 @@
 package com.maxrumo.service.impl;
 
-import com.maxrumo.entity.User;
-import com.maxrumo.entity.UserExample;
-import com.maxrumo.entity.UserExample.Criteria;
-import com.maxrumo.mapper.UserMapper;
-import com.maxrumo.service.UserService;
-import com.maxrumo.util.CommonUtil;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.maxrumo.entity.Role;
+import com.maxrumo.entity.RoleExample;
+import com.maxrumo.entity.User;
+import com.maxrumo.entity.UserExample;
+import com.maxrumo.entity.UserExample.Criteria;
+import com.maxrumo.mapper.RoleMapper;
+import com.maxrumo.mapper.UserMapper;
+import com.maxrumo.service.UserService;
+import com.maxrumo.util.CommonUtil;
+import com.maxrumo.util.Constant;
 
 @Service
 public class UserServiceImpl implements UserService {
 
 	@Autowired
 	UserMapper userMapper;
+	@Autowired
+	RoleMapper roleMapper;
 	@Override
 	public User login(String username, String password) {
 		UserExample example = new UserExample();
@@ -31,6 +38,7 @@ public class UserServiceImpl implements UserService {
 		return CommonUtil.getFirst(list);
 	}
 
+	@Transactional
 	@Override
 	public Map<String,Object> register(User user) {
 		Map<String,Object> map = new HashMap<String, Object>();
@@ -71,6 +79,14 @@ public class UserServiceImpl implements UserService {
 		}
 		user.setPassword(CommonUtil.MD5(user.getPassword()));
 		userMapper.insert(user);
+		//给用户分配学生角色
+		RoleExample example = new RoleExample();
+		example.createCriteria().andEnNameEqualTo(Constant.ROLE_STUDENT);
+		List<Role> list = roleMapper.selectByExample(example);
+		Role role = CommonUtil.getFirst(list);
+		if(role != null){
+			roleMapper.insertUserRole(user.getId(), role.getId());
+		}
 		return map;
 	}
 

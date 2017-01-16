@@ -39,13 +39,12 @@ public class LoginController extends BaseController{
         }
         UsernamePasswordToken token = new UsernamePasswordToken(username, password);
         try{
-            subject.login(token);
+        	if(subject.isAuthenticated()){
+        		return success("无须重复登录");
+        	}
+        	subject.login(token);
             return success("登录成功");
         }catch (Exception e){
-        	String msg = e.getMessage();
-        	if(StringUtils.isNotBlank(msg)){
-        		return fail(msg);
-        	}
             return fail("用户名或密码错误");
         }
     }
