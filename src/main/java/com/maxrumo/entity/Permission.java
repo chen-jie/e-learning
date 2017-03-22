@@ -1,5 +1,7 @@
 package com.maxrumo.entity;
 
+import java.util.List;
+
 public class Permission {
     private Integer id;
 
@@ -13,7 +15,16 @@ public class Permission {
 
     private String url;
 
-    public Integer getId() {
+    private List<Permission> children;
+    
+    public List<Permission> getChildren() {
+		return children;
+	}
+	public void setChildren(List<Permission> children) {
+		this.children = children;
+	}
+
+	public Integer getId() {
         return id;
     }
 
@@ -60,4 +71,11 @@ public class Permission {
     public void setUrl(String url) {
         this.url = url == null ? null : url.trim();
     }
+	@Override
+	public String toString() {
+		return "[id=" + id + ", name=" + name + ", type=" + type
+				+ ", parentId=" + parentId + ", code=" + code + ", url=" + url
+				+ "]";
+	}
+    
 }

@@ -5,26 +5,25 @@ import java.io.File;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
-import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+@EnableTransactionManagement
 @Controller
 @SpringBootApplication
-@EnableAutoConfiguration
-@ServletComponentScan("com.maxrumo")
-public class Application implements EmbeddedServletContainerCustomizer {
+public class Application extends WebMvcConfigurerAdapter implements EmbeddedServletContainerCustomizer {
 
-    private static Logger logger = Logger.getLogger(Application.class);
+//    private static Logger logger = Logger.getLogger(Application.class);
     @Override
     public void customize(ConfigurableEmbeddedServletContainer container) {
     }
@@ -55,17 +54,11 @@ public class Application implements EmbeddedServletContainerCustomizer {
         }
         return "success";
     }
-//    @Bean
-//    public ServletRegistrationBean servletRegistrationBean(){
-//        ServletRegistrationBean bean = new ServletRegistrationBean(new CaptchaServlet(), "/captcha");
-//        return bean;
-//    }
-    /*@Bean
-    public FilterRegistrationBean filtertRegistrationBean(){
-        FilterRegistrationBean bean = new FilterRegistrationBean(new DruidStatFilter());
-        bean.addUrlPatterns("*//*");
-        bean.addInitParameter("exclusions","*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid*//*");
-        return bean;
-    }*/
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+		super.addResourceHandlers(registry);
+	}
 }
 

@@ -15,8 +15,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.maxrumo.Application;
+import com.maxrumo.entity.Permission;
 import com.maxrumo.entity.User;
 import com.maxrumo.entity.UserExample;
+import com.maxrumo.mapper.PermissionMapper;
 import com.maxrumo.mapper.UserMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -29,6 +31,9 @@ public class ToutiaoApplicationTests {
 	
 	@Autowired
 	private UserMapper userMapper;
+	
+	@Autowired
+	private PermissionMapper permissionMapper;
 	@Test
     public void getDataSource() {
 		System.out.println(dataSource.getClass().getName());
@@ -52,6 +57,12 @@ public class ToutiaoApplicationTests {
 	@Test
 	public void testSelectByMapper(){
 		List<User> list = userMapper.selectByExample(new UserExample());
+		System.out.println(list);
+	}
+	
+	@Test
+	public void testSelectAllTree(){
+		List<Permission> list = permissionMapper.findAllTree();
 		System.out.println(list);
 	}
 }

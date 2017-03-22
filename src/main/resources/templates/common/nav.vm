@@ -2,7 +2,7 @@
 <div class="layui-header header">
     <div class="layui-main">
         <a class="logo" href="/">
-            <img src="/images/logo.png" alt="分享文档">
+            <img src="/static/images/logo.png" alt="分享文档">
         </a>
         <ul class="layui-nav">
             <li class="layui-nav-item">
@@ -17,13 +17,13 @@
                 <i class="iconfont icon-wode"></i>
             </a>
             <span>
-                <a href="/toLogin/">登入</a>
-                <a href="/toReg/">注册</a>
+                <a href="/toLogin">登入</a>
+                <a href="/toReg">注册</a>
             </span>
             
             <!-- 登入后的状态 -->
-            <a class="avatar" th:href="/user/">
-	        	<img src="/images/default_avatar.png" />
+            <a class="avatar" href="/user/">
+	        	<img src="/static/images/default_avatar.png" />
 	        	<cite text="">小虾米</cite>
             </a>
             <div class="nav">

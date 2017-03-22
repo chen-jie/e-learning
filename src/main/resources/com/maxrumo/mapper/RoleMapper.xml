@@ -129,4 +129,19 @@
       discription = #{discription,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+  <select id="findRoleByUsername" parameterType="String" resultMap="BaseResultMap">
+    SELECT DISTINCT role.*
+	FROM ROLE,
+	     user_role,
+	     user
+	WHERE user.username = #{username}
+	  AND user_role.user_id = user.id
+	  AND user_role.role_id = role.id
+  </select>
+  
+  <insert id="insertUserRole">
+  	INSERT INTO user_role(user_id,role_id)
+  	VALUES(#{userId},#{roleId})
+  </insert>
 </mapper>

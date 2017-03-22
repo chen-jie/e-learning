@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50532
 File Encoding         : 65001
 
-Date: 2016-12-30 18:10:55
+Date: 2017-01-16 14:09:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,14 +24,28 @@ CREATE TABLE `permission` (
   `name` varchar(20) NOT NULL,
   `type` varchar(10) NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
-  `code` varchar(20) DEFAULT NULL,
+  `code` varchar(100) DEFAULT NULL,
   `url` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of permission
 -- ----------------------------
+INSERT INTO `permission` VALUES ('1', '权限管理', 'menu', null, '', '');
+INSERT INTO `permission` VALUES ('2', '资源管理', 'menu', '1', 'admin/perm', 'admin/perm');
+INSERT INTO `permission` VALUES ('3', '角色管理', 'menu', '1', 'admin/role', 'admin/role');
+INSERT INTO `permission` VALUES ('4', '用户管理', 'menu', '1', 'admin/user', 'admin/user');
+INSERT INTO `permission` VALUES ('5', '资源列表', 'action', '2', 'admin/perm/list', 'admin/perm/list');
+INSERT INTO `permission` VALUES ('6', '添加资源', 'action', '2', 'admin/perm/add', 'admin/perm/add');
+INSERT INTO `permission` VALUES ('7', '编辑资源', 'action', '2', 'admin/perm/edit', 'admin/perm/edit');
+INSERT INTO `permission` VALUES ('8', '删除资源', 'action', '2', 'admin/perm/delete', 'admin/perm/delete');
+INSERT INTO `permission` VALUES ('14', 'aaddddddddsa', 'dddsa', null, 'a', 'aaddddddddddd');
+INSERT INTO `permission` VALUES ('15', '角色列表', 'action', '3', 'admin/role/list', 'admin/role/list');
+INSERT INTO `permission` VALUES ('16', '添加角色', 'action', '3', 'admin/role/add', 'admin/role/add');
+INSERT INTO `permission` VALUES ('17', '编辑角色', 'action', '3', 'admin/role/edit', 'admin/role/edit');
+INSERT INTO `permission` VALUES ('18', '分配资源', 'action', '3', 'admin/role/assign', 'admin/role/assignPerm');
+INSERT INTO `permission` VALUES ('19', '分配用户', 'action', '3', 'admin/role/assginUser', 'admin/role/assginUser');
 
 -- ----------------------------
 -- Table structure for `role`
@@ -61,11 +75,15 @@ CREATE TABLE `role_permission` (
   `role_id` int(11) NOT NULL,
   `permission_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of role_permission
 -- ----------------------------
+INSERT INTO `role_permission` VALUES ('1', '1', '1');
+INSERT INTO `role_permission` VALUES ('2', '1', '2');
+INSERT INTO `role_permission` VALUES ('3', '1', '3');
+INSERT INTO `role_permission` VALUES ('4', '1', '4');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -80,12 +98,17 @@ CREATE TABLE `user` (
   `avatar` varchar(100) DEFAULT NULL COMMENT '头像地址',
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES ('1', 'admin', '21232f297a57a5a743894a0e4a801fc3', '如墨', '737050283@qq.com', null);
+INSERT INTO `user` VALUES ('2', 'zhigui', 'E9E4BB30F8B5A752B6369DA7449FFE80', '志贵', 'zhigui@qq.com', null);
+INSERT INTO `user` VALUES ('3', 'dsads', '0B4E7A0E5FE84AD35FB5F95B9CEEAC79', 'dsa', 'adsad@qq.ccsa', null);
+INSERT INTO `user` VALUES ('4', 'aaaaaa', '0B4E7A0E5FE84AD35FB5F95B9CEEAC79', 'aaaaaa', 'aaaa@qqdas.sa', null);
+INSERT INTO `user` VALUES ('7', 'dsadsa', 'C91C03EA6C46A86CBC019BE3D71D0A1A', 'dsadsa', 'dsadsa@v.com', null);
+INSERT INTO `user` VALUES ('8', 'dddddd', '980AC217C6B51E7DC41040BEC1EDFEC8', 'dddddd', 'dddddd@qq.com', null);
 
 -- ----------------------------
 -- Table structure for `user_role`
@@ -96,8 +119,10 @@ CREATE TABLE `user_role` (
   `role_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (` id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_role
 -- ----------------------------
+INSERT INTO `user_role` VALUES ('1', '1', '1');
+INSERT INTO `user_role` VALUES ('2', '3', '8');

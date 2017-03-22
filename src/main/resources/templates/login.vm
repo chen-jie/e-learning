@@ -42,7 +42,7 @@
                     </div>
                     <div class="layui-inline">
                         <div class="layui-form-mid layui-word-aux">
-                            <img id="vcode" src="/vcode" />
+                            <img id="vcode" src="/vcode" width="65px" height="50px"/>
                             <a href="javascript:void(0)" onclick="changeImg()">换一张</a>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
 
 #parse("common/footer.vm")
 </body>
-<script src="/layui/layui.js"></script>
+<script src="/static/layui/layui.js"></script>
 <script inline="javascript">
 layui.use(['layer', 'element', 'form'], function(){
     var $ = layui.jquery
@@ -80,6 +80,8 @@ layui.use(['layer', 'element', 'form'], function(){
                     layer.msg(res.msg||res.code, {shift: 6});
                 } else {
                     layer.msg(res.msg||res.code, {shift: 6});
+                    changeImg();
+                    $('#L_code').val("");
                 }
             }, error: function(e){
                 options.error || layer.msg('请求异常，请重试', {shift: 6});
