@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>后台管理</title>
+    
+    #parse("common/head.vm")
+    <style type="text/css">
+    .header {top: 0; box-shadow: 0 1px 12px rgba(16, 6, 25, 0.2); z-index: 999;}
+    .main {width: 450px; min-height: 342px; margin: 4rem auto 4.2rem; padding: 1rem 3.25rem 1.2rem; background: #ffffff;}
+    .main .layui-form-pane .layui-form-label {line-height: 32px;}
+    .main .layui-input,.layui-btn-big {height: 50px; line-height: 50px;}
+    .main .layui-btn {background-color: #1BAAE6;}
+    .footer {background-color: #ffffff;}
+    th{
+    	text-align:left;
+    }
+    </style>
+    
+	<script src="/static/fancyTree/lib/jquery-ui.custom.js"></script>
+	<script src="/static/fancyTree/lib/jquery.ui-contextmenu.min.js"></script>
+    <link rel="stylesheet" href="/static/fancyTree/css/skin-lion/ui.fancytree.css" media="all"/>
+	<script src="/static/fancyTree/src/jquery.fancytree.js"></script>
+	<script src="/static/fancyTree/src/jquery.fancytree.table.js"></script>
+	<link rel="stylesheet" href="/static/fancyTree/css/jquery-ui.min.css" media="all"/>
+	<script src="/static/layui/layui.js"></script>
+	<script src="/static/js/custom/tree.js"></script>
+</head>
+
+<body class="example">
+	<button class="layui-btn" onclick="proccess('add')">添加一个顶级资源</button>
+  <table id="tree" class="layui-table">
+		    <colgroup>
+		    <col width="20%"></col>
+		    <col width="20%"></col>
+		    <col width="20%"></col>
+		    <col width="20%"></col>
+		    <col width="20%"></col>
+		    </colgroup>
+		    <thead>
+		      <tr> 
+		      	<th style="text-align:center;">资源名</th><th>资源ID</th><th>父节点ID</th><th>涉及URL路径</th><th>类型</th> 
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr><td></td><td></td><td></td><td></td><td></td> </tr>
+		    </tbody>
+		</table>
+</body>
+</html>

@@ -37,4 +37,6 @@ public interface PermissionMapper {
 	List<Permission> findAllTree();
 	
 	List<Permission> findByParentId(Integer parentId);
+
+//	List<Permission> findByRoleId(int roleId);
 }

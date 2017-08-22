@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-learning</title>
+
+    #parse("common/head.vm")
+    <link rel="stylesheet" href="/static/css/2.css" media="all"/>
+    <style type="text/css">
+        .header {
+            top: 0;
+            box-shadow: 0 1px 12px rgba(16, 6, 25, 0.2);
+            z-index: 999;
+        }
+
+        .main {
+            width: 1185px;
+            min-height: 342px;
+            margin: 4rem auto 4.2rem;
+            padding: 1rem 3.25rem 1.2rem;
+            background: #ffffff;
+        }
+
+        .main .layui-form-pane .layui-form-label {
+            line-height: 32px;
+        }
+
+        .main .layui-input, .layui-btn-big {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .main .layui-btn {
+            background-color: #1BAAE6;
+        }
+
+        .footer {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    #if($!msg)
+    <script>
+        layer.msg('$msg');
+    </script>
+    #end
+<div class="layui-clear" style="padding: 5px;border-bottom: 1px solid #ccc;background-color: #f8f8f8;">
+    <div style="width: 180px;padding-right:15px;border-right: 1px solid #ccc;float: left;text-align: center;">
+        <img src="$course.poster" width="70%;" height="50px;">
+    </div>
+    <div style="float: left;padding: 10px;">
+        <h4 class="" style="font-weight: bold">$!course.courseName</h4>
+        <p style="color:red;">$!course.teacherName</p>
+    </div>
+</div>
+<section>
+    <div style="float: left;">
+        <ul class="layui-nav layui-nav-tree" lay-filter="test" style="height: 300px;">
+            <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+            <li class="layui-nav-item"><a href="/teacher/course/content/$!course.id">课程内容</a></li>
+            <li class="layui-nav-item"><a href="/teacher/homework/$!course.id">课程作业</a></li>
+            <li class="layui-nav-item layui-nav-itemed"><a href="/teacher/topic/$!course.id/0">讨论区</a></li>
+        </ul>
+    </div>
+    <div style="width: auto;margin-left:200px;padding:10px;">
+        <div class="line">
+            <div class="xs8">
+                <div class="margin">
+                    <div class="bbs_cnt fadein-bottom">
+                        <div class="fly-list lazy-box">
+                            <!-- 获取置顶 -->
+                            #foreach($topic in $list)
+                                <li class="fly-list-li">
+
+                                    <a href="javascript:void(0);" class="fly-list-avatar">
+                                        <img src="$!course.poster"  data--lazy-load-img-state="success" class="success">
+                                        <div class="bbs_cnt_a isno"></div>
+                                    </a>
+                                    <h2 class="fly-tip">
+                                        <span class="fly-tip-w text float-right isno"><i class="layui-icon">&#xe63a;</i> $!topic.replyCount
+                                            #if($!user.roleId == 2)
+                                                <button class="layui-btn layui-btn-mini layui-btn-danger" onclick="deleteTopic($!topic.id)">删除</button>
+                                                #if($!topic.isTop == 1)
+                                                    <button class="layui-btn layui-btn-mini fly-tip-stick" onclick="toTop($!topic.id)">取消置顶</button>
+                                                #else
+                                                    <button class="layui-btn layui-btn-mini fly-tip-stick" onclick="toTop($!topic.id)">置顶</button>
+                                                #end
+                                            #elseif($!topic.authorId == $!user.id)
+                                                <button class="layui-btn layui-btn-mini layui-btn-danger" onclick="deleteTopic($!topic.id)">删除</button>
+                                            #end
+                                        </span>
+                                        ##<span class="fly-tip-lie isno" style="background-color:#30668c"><i style="border-left: 4px solid #30668c;"></i>
+                                            ##<a href="http://www.lanhubao.com/topic/flist/1">江湖</a>
+                                       ## </span>
+                                        <a href="/topic/show/$!topic.id" target="_blank">$!topic.title</a>
+                                        #if($!topic.isTop == 1)
+                                            <span class="fly-tip-stick isno">置顶</span>
+                                        #end
+                                    ## <span class="fly-tip-jing  isno">精帖</span>
+                                    </h2>
+                                    <p>
+                                        <span>$date.format('yyyy-MM-dd',$topic.createTime)</span>
+                                        <span> <i class="layui-icon">&#xe643;</i> $!topic.viewCount</span>
+                                        <span class="float-right isno"><a href="javacript:void(0)">
+                                            <i class="layui-icon">&#xe612;</i> $!topic.author</a>
+                                        </span>
+                                        <span class="float-right isno">$date.format('yyyy-MM-dd HH:mm:ss',$topic.lastReplyTime)
+                                        </span>
+                                    </p>
+                                </li>
+                            #end
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xs4">
+                <div style="margin-left: 5px;padding: 10px;border: 1px solid #eee;">
+                    <blockquote class="layui-elem-quote">发表话题</blockquote>
+                    <form class="layui-form layui-form-pane" action="/topic/add" enctype="multipart/form-data" method="post">
+                        <input type="hidden" name="courseId" value="$!course.id">
+                        <div class="layui-form-item">
+                        <label class="layui-form-label">标题</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required lay-filter="title" lay-verify="title"
+                                   autocomplete="off" placeholder="请输入标题" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">内容</label>
+                        <div class="layui-input-block">
+                            <textarea id="demo" name="content"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-inline">
+                            <button class="layui-btn" lay-submit="" id="add" lay-filter="useradd">发布</button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+<script src="/static/layui/layui.js"></script>
+<script>
+    layui.use('layedit', function () {
+        var layedit = layui.layedit;
+        layedit.build('demo', {
+            tool: ['strong' //加粗
+                , 'italic' //斜体
+                , 'underline' //下划线
+                , 'del' //删除线
+
+                , '|' //分割线
+
+                , 'left' //左对齐
+                , 'center' //居中对齐
+                , 'right' //右对齐
+                , 'link' //超链接
+                , 'unlink' //清除链接
+                , 'face' //表情
+            ]
+        }); //建立编辑器
+    });
+    function deleteTopic(id) {
+        layer.confirm("确定要删除吗?",{icon:3,title:'提示'},function(){
+            $.post("/teacher/topic/delete/"+id,function (res) {
+                if(res.status === 0) {
+                    layer.alert(res.msg,function(){
+                        layer.closeAll();
+                        window.location.reload();
+                    });
+                } else {
+                    layer.alert(res.msg);
+                }
+            },'json');
+        })
+    }
+    function toTop(id) {
+        $.post("/teacher/topic/toTop/"+id,function (res) {
+            if(res.status === 0) {
+                window.location.reload();
+            } else {
+                layer.alert(res.msg);
+            }
+        },'json');
+    }
+</script>
+</html>

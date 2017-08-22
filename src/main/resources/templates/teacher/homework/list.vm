@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-learning</title>
+
+    #parse("common/head.vm")
+    <link rel="stylesheet" href="/static/css/2.css" media="all"/>
+    <link rel="stylesheet" href="/static/css/index.css"/>
+    <style type="text/css">
+        .layui-nav-tree {
+            width: 200px;
+            padding: 0;
+        }
+        .my-define-file {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 8px 15px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .my-define-file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .my-define-file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    #if($!msg)
+    <script>
+        layer.msg('$msg');
+    </script>
+    #end
+<div class="layui-clear" style="padding: 5px;border-bottom: 1px solid #ccc;background-color: #f8f8f8;">
+    <div style="width: 180px;padding-right:15px;border-right: 1px solid #ccc;float: left;text-align: center;">
+        <img src="$course.poster" width="70%;" height="50px;">
+    </div>
+    <div style="float: left;padding: 10px;">
+        <h4 class="" style="font-weight: bold">$!course.courseName</h4>
+        <p style="color:red;">$!course.teacherName</p>
+    </div>
+</div>
+<section>
+    <div style="float: left;">
+        <ul class="layui-nav layui-nav-tree" lay-filter="test" style="height: 300px;">
+            <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+            <li class="layui-nav-item"><a href="/teacher/course/content/$!course.id">课程内容</a></li>
+            <li class="layui-nav-item layui-nav-itemed"><a href="/teacher/homework/$!course.id">课程作业</a></li>
+            <li class="layui-nav-item"><a href="/teacher/topic/$!course.id/0">讨论区</a></li>
+        </ul>
+    </div>
+    <div style="width: auto;margin-left:200px;padding:10px;">
+        <table class="table-box table-sort" id="userTable">
+            #if($!user.roleId == 3)
+                <thead>
+                <tr>
+                    <th>所属章节</th>
+                    <th>作业名称</th>
+                    <th>截止日期</th>
+                    <th>得分</th>
+                    <th>下载作业</th>
+                    <th>我的作业</th>
+                    <th>上传作业</th>
+                </tr>
+                </thead>
+                <tbody>
+                    #foreach($map in $list)
+                        #set($homework = $map.homework)
+                        #set($judgement = $map.judgement)
+                    <tr>
+                        <td>$!homework.chapterName</td>
+                        <td>$!homework.name</td>
+                        <td>$date.format('yyyy-MM-dd',$!homework.endTime)</td>
+                        <td>
+                            #if($!judgement.status == 0)
+                                <span style="color:red;">未提交作业</span>
+                            #elseif($!judgement.status == 1)
+                                待评分
+                            #else
+                                $!judgement.score
+                            #end
+                        </td>
+                        <td>
+                            <a href="/teacher/homework/download?id=$homework.id" class="layui-btn  radius btn-delect">下载作业</a>
+                        </td>
+                        <td>
+                            #if($!judgement.status == 0)
+                                <span style="color:red;">未提交作业</span>
+                            #else
+                                <a href="/teacher/homework/downloadJudgement?id=$homework.id" class="layui-btn  radius btn-delect">下载我的作业</a>
+                            #end
+                        </td>
+                        <td>
+                            #if($!map.showBtn == true)
+                                <span class="my-define-file">上传作业
+                                    <input type="file" name="file" class="layui-input" onchange="UploadHomework(this,$!judgement.id)">
+                                </span>
+                            #else
+                                已经截止
+                            #end
+                        </td>
+                    </tr>
+                    #end
+                </tbody>
+
+
+
+            #else
+                <thead>
+                <tr>
+                    <th>所属章节</th>
+                    <th>作业名称</th>
+                    <th>截止日期</th>
+                    <th>下载作业</th>
+                    <th>查看学生完成情况</th>
+                </tr>
+                </thead>
+                <tbody>
+                    #foreach($map in $list)
+                        #set($homework = $map.homework)
+                        #set($judgement = $map.judgement)
+                    <tr>
+                        <td>$!homework.chapterName</td>
+                        <td>$!homework.name</td>
+                        <td>$date.format('yyyy-MM-dd',$!homework.endTime)</td>
+                        <td>
+                            <a href="/teacher/homework/download?id=$homework.id" class="layui-btn  radius btn-delect">下载作业</a>
+                        </td>
+                        <td>
+                            <a href="/teacher/homework/report?homeworkId=$!homework.id" target="_blank" class="layui-btn  radius btn-delect">  查看学生完成情况</a>
+                        </td>
+                    </tr>
+                    #end
+                </tbody>
+            #end
+
+        </table>
+    </div>
+</section>
+
+
+</body>
+<script src="/static/layui/layui.js"></script>
+<script>
+    layui.use('layedit', function () {
+        var layedit = layui.layedit;
+        layedit.build('demo', {
+            tool: ['strong' //加粗
+                , 'italic' //斜体
+                , 'underline' //下划线
+                , 'del' //删除线
+
+                , '|' //分割线
+
+                , 'left' //左对齐
+                , 'center' //居中对齐
+                , 'right' //右对齐
+                , 'link' //超链接
+                , 'unlink' //清除链接
+                , 'face' //表情
+            ]
+        }); //建立编辑器
+    });
+
+    function UploadHomework(input,judgementId) {
+        var fileObj = input.files[0]; // 获取文件对象
+        if(fileObj != null){
+            // FormData 对象
+            var form = new FormData();
+            form.append("judgementId", judgementId);                        // 可以增加表单数据
+            form.append("file", fileObj);
+            $.ajax({
+                url:"/teacher/homework/uploadHomework",
+                type:"post",
+                data:form,
+                dataType: "json",
+                success:function (res) {
+                    if(res.status == 0) {
+                        layer.alert(res.msg,function(){
+                            layer.closeAll();
+                            window.location.reload();
+                        });
+                    } else {
+                        layer.alert(res.msg);
+                    }
+                },
+                // 告诉jQuery不要去处理发送的数据
+                processData : false,
+                // 告诉jQuery不要去设置Content-Type请求头
+                contentType : false
+            })
+        }
+
+    }
+</script>
+</html>

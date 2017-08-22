@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>课程列表</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/static/css/index.css"/>
+    #parse("./common/head.vm")
+</head>
+
+<body>
+<div class="tab-body">
+    <div class="layui-clear">
+    </div>
+    <table class="table-box table-sort" id="userTable">
+        <thead>
+        <tr>
+            <th>课程名</th>
+            <th>加入时间</th>
+            <th>在学人数</th>
+            <th>封面</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+            #foreach($course in $list)
+            <tr>
+                <td><a href="/course/detail/$!course.id" target="_blank">$course.courseName</a></td>
+                <td>$date.format('yyyy-MM-dd',$course.createDate)</td>
+                <td>$course.studentCount</td>
+                <td><a href="$!course.poster" target="_blank"><img src="$!course.poster" style="height: 50px;"></a></td>
+                <td>
+                    <span>
+                        <a href="/teacher/course/content/$!course.id" target="_blank" class="layui-btn btn-add btn-default"><i
+                            class="layui-icon">&#xe615;</i> 查看课程内容</a>
+                    </span>
+                </td>
+            </tr>
+            #end
+        </tbody>
+    </table>
+</div>
+<script src="/static/layui/layui.js"></script>
+<script>
+    function layer_show(title, url, id, w, h) {
+        if (title == null || title == '') {
+            title = false;
+        }
+        ;
+        if (w == null || w == '') {
+            w = 700;
+        }
+        ;
+        if (h == null || h == '') {
+            h = ($(window).height() - 600);
+        }
+        ;
+        w=650;
+        h=500;
+        parent.layer.open({
+            type: 2,
+            area: [w + 'px', h + 'px'],
+            fix: false,
+            maxmin: true,
+            shade: false,
+            title: title,
+            content: url
+        });
+    };
+    function editCourse(id) {
+         layer_show("编辑", "/teacher/course/toEdit/" + id, '', 600, 600);
+    }
+    function deleteCourse(id) {
+        layer.confirm("确定要删除吗?",{icon:3,title:'提示'},function(){
+            $.post("/teacher/course/delete/"+id,function (res) {
+                if(res.status === 0) {
+                    layer.alert(res.msg,function(){
+                        layer.closeAll();
+                        window.location.reload();
+                    });
+                } else {
+                    layer.alert(res.msg);
+                }
+            },'json');
+        })
+    }
+    $(document).ready(function () {
+        $("#btn-addcourse").on('click', function () {
+            layer_show('添加', '/teacher/course/toAdd', '', 600, 600);
+        });
+        $("#btn-refresh").on('click', function () {
+            window.location.reload();
+        });
+    });
+</script>
+</body>
+
+</html>

@@ -1,11 +1,5 @@
 package com.maxrumo.test;
 
-import java.io.File;
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.junit.Test;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
@@ -14,6 +8,12 @@ import org.mybatis.generator.exception.InvalidConfigurationException;
 import org.mybatis.generator.exception.XMLParserException;
 import org.mybatis.generator.internal.DefaultShellCallback;
 
+import java.io.File;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class GeneratorMybatisTest {
 	@Test
 	public void test() {
@@ -21,8 +21,8 @@ public class GeneratorMybatisTest {
 		boolean overwrite = true;
 		String genCfg = "generatorConfig.xml";
 
-		File configFile = new File(GeneratorMybatisTest.class.getResource(genCfg).getFile());
-
+//		File configFile = new File(GeneratorMybatisTest.class.getResource(genCfg).getFile());
+		File configFile = new File("D:/"+genCfg);
 		ConfigurationParser cp = new ConfigurationParser(warnings);
 		Configuration config = null;
 		try {

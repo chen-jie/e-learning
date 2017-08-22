@@ -13,6 +13,16 @@ public class User {
 
     private String avatar;
 
+    private Integer  roleId;
+
+    public Integer getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -55,6 +65,19 @@ public class User {
 
     public String getAvatar() {
         return avatar;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", email='" + email + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", roleId=" + roleId +
+                '}';
     }
 
     public void setAvatar(String avatar) {

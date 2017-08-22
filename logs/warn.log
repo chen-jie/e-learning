@@ -1,0 +1,16 @@
+2017-06-07 15:06:51  [ http-nio-8080-exec-1:79019 ] - [ WARN ]  XMLToolboxManager has been deprecated. Please use org.apache.velocity.tools.ToolboxFactory instead.
+2017-06-07 15:06:51  [ http-nio-8080-exec-1:79020 ] - [ WARN ]  ServletToolboxManager has been deprecated. Please use org.apache.velocity.tools.ToolboxFactory instead.
+2017-06-07 15:06:51  [ http-nio-8080-exec-1:79041 ] - [ ERROR ]  Tool has no key defined!
+2017-06-07 15:07:46  [ http-nio-8080-exec-2:133962 ] - [ ERROR ]  ResourceManager : unable to find resource '/teacher/course/content.vm' in any resource loader.
+2017-06-07 15:07:46  [ http-nio-8080-exec-2:133991 ] - [ ERROR ]  ResourceManager : unable to find resource 'error.vm' in any resource loader.
+2017-06-07 15:07:54  [ http-nio-8080-exec-6:141897 ] - [ ERROR ]  ResourceManager : unable to find resource '/teacher/course/content.vm' in any resource loader.
+2017-06-07 15:07:54  [ http-nio-8080-exec-6:141910 ] - [ ERROR ]  ResourceManager : unable to find resource 'error.vm' in any resource loader.
+2017-06-07 15:08:18  [ http-nio-8080-exec-1:166176 ] - [ ERROR ]  ResourceManager : unable to find resource '/teacher/course/content.vm' in any resource loader.
+2017-06-07 15:08:18  [ http-nio-8080-exec-1:166187 ] - [ ERROR ]  ResourceManager : unable to find resource 'error.vm' in any resource loader.
+2017-06-08 14:29:12  [ http-nio-8080-exec-1:20366 ] - [ WARN ]  XMLToolboxManager has been deprecated. Please use org.apache.velocity.tools.ToolboxFactory instead.
+2017-06-08 14:29:12  [ http-nio-8080-exec-1:20402 ] - [ WARN ]  ServletToolboxManager has been deprecated. Please use org.apache.velocity.tools.ToolboxFactory instead.
+2017-06-08 14:29:12  [ http-nio-8080-exec-1:20435 ] - [ ERROR ]  Tool has no key defined!
+2017-06-08 14:29:35  [ http-nio-8080-exec-3:43895 ] - [ ERROR ]  ResourceManager : unable to find resource '/teacher/course/content.vm' in any resource loader.
+2017-06-08 14:29:35  [ http-nio-8080-exec-3:43925 ] - [ ERROR ]  ResourceManager : unable to find resource 'error.vm' in any resource loader.
+2017-06-08 14:29:52  [ http-nio-8080-exec-4:60889 ] - [ ERROR ]  ResourceManager : unable to find resource '/teacher/course/content.vm' in any resource loader.
+2017-06-08 14:29:52  [ http-nio-8080-exec-4:60901 ] - [ ERROR ]  ResourceManager : unable to find resource 'error.vm' in any resource loader.

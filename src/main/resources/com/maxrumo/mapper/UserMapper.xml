@@ -8,6 +8,7 @@
     <result column="nickname" jdbcType="VARCHAR" property="nickname" />
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="avatar" jdbcType="VARCHAR" property="avatar" />
+    <result column="role_id" jdbcType="VARCHAR" property="roleId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -39,7 +40,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, username, password, nickname, email, avatar
+    id, username, password, nickname, email, avatar, role_id
   </sql>
   <select id="selectByExample" parameterType="com.maxrumo.entity.UserExample" resultMap="BaseResultMap">
     select
@@ -66,12 +67,12 @@
     delete from user
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.maxrumo.entity.User" useGeneratedKeys="true" keyProperty="id">
+  <insert id="insert" parameterType="com.maxrumo.entity.User" >
     insert into user (username, password, 
-      nickname, email, avatar
+      nickname, email, avatar ,role_id
       )
     values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{nickname,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{avatar,jdbcType=VARCHAR}
+      #{nickname,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{avatar,jdbcType=VARCHAR}, #{roleId}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.maxrumo.entity.User">
@@ -95,6 +96,9 @@
       <if test="avatar != null">
         avatar,
       </if>
+      <if test="roleId != null">
+        role_id,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -114,6 +118,9 @@
       </if>
       <if test="avatar != null">
         #{avatar,jdbcType=VARCHAR},
+      </if>
+      <if test="roleId != null">
+        #{roleId},
       </if>
     </trim>
   </insert>
@@ -141,6 +148,9 @@
       <if test="avatar != null">
         avatar = #{avatar,jdbcType=VARCHAR},
       </if>
+      <if test="roleId != null">
+        role_id = #{roleId},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -150,7 +160,8 @@
       password = #{password,jdbcType=VARCHAR},
       nickname = #{nickname,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},
-      avatar = #{avatar,jdbcType=VARCHAR}
+      avatar = #{avatar,jdbcType=VARCHAR},
+      role_id = #{roleId}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

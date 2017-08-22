@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-learning</title>
+
+    #parse("common/head.vm")
+    <link rel="stylesheet" href="/static/css/2.css" media="all"/>
+    <link rel="stylesheet" href="/static/css/index.css"/>
+    <style type="text/css">
+        .layui-nav-tree {
+            width: 200px;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    #if($!msg)
+    <script>
+        layer.msg('$msg');
+    </script>
+    #end
+<div class="layui-clear" style="padding: 5px;border-bottom: 1px solid #ccc;background-color: #f8f8f8;">
+    <div style="width: 180px;padding-right:15px;border-right: 1px solid #ccc;float: left;text-align: center;">
+        <img src="$course.poster" width="70%;" height="50px;">
+    </div>
+    <div style="float: left;padding: 10px;">
+        <h4 class="" style="font-weight: bold">$!course.courseName</h4>
+        <p style="color:red;">$!course.teacherName</p>
+    </div>
+</div>
+    #set($submitedMapList = $!map.submitedMapList)
+    #set($unSubmitedMapList = $!map.unSubmitedMapList)
+    #set($unReviewMapList = $!map.unReviewMapList)
+<section>
+    <div style="width: auto;padding:10px;">
+        <div class="layui-tab layui-tab-card" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">已提交作业</li>
+                <li>待评分</li>
+                <li>未提交作业</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <table class="table-box table-sort" id="userTable">
+                        <thead>
+                        <tr>
+                            <th>学生姓名</th>
+                            <th>提交日期</th>
+                            <th>得分</th>
+                            <th>下载作业</th>
+                            <th>评分</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            #foreach($map in $submitedMapList)
+                                #set($user = $map.user)
+                                #set($judgement = $map.judgement)
+                            <tr>
+                                <td>$!user.nickname</td>
+                                <td>
+                                    #if($!judgement.status != 0)
+                                        $date.format('yyyy-MM-dd',$!judgement.createTime)
+                                    #end
+                                </td>
+                                <td>$!judgement.score</td>
+                                <td>
+                                    <a href="/teacher/homework/downloadJudgement?id=$judgement.id" class="layui-btn  radius btn-delect">下载作业</a>
+                                </td>
+                                <td>
+                                    #if($!judgement.status == 2)
+                                        <button onclick="review('$!judgement.id')" class="layui-btn radius layui-btn-normal">  修改评分</button>
+                                    #else
+                                        <button onclick="review('$!judgement.id')" class="layui-btn radius btn-delect">  评分</button>
+                                    #end
+                                </td>
+                            </tr>
+                            #end
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-tab-item">
+                    <table class="table-box table-sort" id="userTable">
+                        <thead>
+                        <tr>
+                            <th>学生姓名</th>
+                            <th>提交日期</th>
+                            <th>得分</th>
+                            <th>下载作业</th>
+                            <th>评分</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            #foreach($map in $unReviewMapList)
+                                #set($user = $map.user)
+                                #set($judgement = $map.judgement)
+                            <tr>
+                                <td>$!user.nickname</td>
+                                <td>
+                                    #if($!judgement.status != 0)
+                                        $date.format('yyyy-MM-dd',$!judgement.createTime)
+                                    #end
+                                </td>
+                                <td>$!judgement.score</td>
+                                <td>
+                                    <a href="/teacher/homework/downloadJudgement?id=$judgement.id" class="layui-btn  radius btn-delect">下载作业</a>
+                                </td>
+                                <td>
+                                    #if($!judgement.status == 2)
+                                        <button onclick="review('$!judgement.id')" class="layui-btn radius layui-btn-normal">  修改评分</button>
+                                    #else
+                                        <button onclick="review('$!judgement.id')" class="layui-btn radius btn-delect">  评分</button>
+                                    #end
+                                </td>
+                            </tr>
+                            #end
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-tab-item">
+                    <table class="table-box table-sort" id="userTable">
+                        <thead>
+                        <tr>
+                            <th>学生姓名</th>
+                            <th>提交日期</th>
+                            <th>得分</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            #foreach($map in $unSubmitedMapList)
+                                #set($user = $map.user)
+                                #set($judgement = $map.judgement)
+                            <tr>
+                                <td>$!user.nickname</td>
+                                <td>
+                                    #if($!judgement.status != 0)
+                                        $date.format('yyyy-MM-dd',$!judgement.createTime)
+                                    #end
+                                </td>
+                                <td>$!judgement.score</td>
+                            </tr>
+                            #end
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+<script src="/static/layui/layui.js"></script>
+<script>
+    layui.use('layedit', function () {
+        var layedit = layui.layedit;
+        layedit.build('demo', {
+            tool: ['strong' //加粗
+                , 'italic' //斜体
+                , 'underline' //下划线
+                , 'del' //删除线
+
+                , '|' //分割线
+
+                , 'left' //左对齐
+                , 'center' //居中对齐
+                , 'right' //右对齐
+                , 'link' //超链接
+                , 'unlink' //清除链接
+                , 'face' //表情
+            ]
+        }); //建立编辑器
+    });
+</script>
+<script inline="javascript">
+    layui.use(['layer', 'element', 'form'], function () {
+        var $ = layui.jquery
+                , layer = layui.layer
+                , element = layui.element();
+
+    });
+
+    function review(judgementId){
+        layer.prompt({
+            formType: 3,
+            value: '0',
+            title: '请输入得分'
+        }, function(value, index, elem){
+            if(isNaN(value)){
+                layer.alert("请输入0-100的数字");
+            }else if(value < 0 || value > 100){
+                layer.alert("请输入0-100的数字");
+            }else{
+                $.post("/teacher/homework/judge",{'judgementId':judgementId,'score':value},function(res){
+                    if(res.status === 0) {
+                        layer.alert(res.msg,function(){
+                            layer.closeAll();
+                            window.location.reload();
+                        });
+                    } else {
+                        layer.alert(res.msg);
+                    }
+                },'json');
+            }
+        });
+    }
+</script>
+</html>

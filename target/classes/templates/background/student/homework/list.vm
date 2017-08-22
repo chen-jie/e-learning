@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-learning</title>
+
+    #parse("common/head.vm")
+    <link rel="stylesheet" href="/static/css/2.css" media="all"/>
+    <link rel="stylesheet" href="/static/css/index.css"/>
+    <style type="text/css">
+        .layui-nav-tree {
+            width: 200px;
+            padding: 0;
+        }
+        .my-define-file {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 8px 15px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .my-define-file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .my-define-file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+<section>
+    <div style="padding:10px;">
+        <table class="table-box table-sort" id="userTable">
+                <thead>
+                <tr>
+                    <th>课程名</th>
+                    <th>章节名</th>
+                    <th>截止日期</th>
+                    <th>下载作业</th>
+                    <th>上传作业</th>
+                </tr>
+                </thead>
+                <tbody>
+                    #foreach($map in $list)
+                        #set($course = $map.course)
+                        #set($homework = $map.homework)
+                        #set($judgement = $map.judgement)
+                    <tr>
+                        <td>$!course.courseName</td>
+                        <td>$!homework.chapterName</td>
+                        <td>$date.format('yyyy-MM-dd',$!homework.endTime)</td>
+                        <td>
+                            <a href="/teacher/homework/download?id=$homework.id" class="layui-btn  radius btn-delect">下载作业</a>
+                        </td>
+                        <td>
+                            #if($!map.showBtn == true)
+                                <span class="my-define-file">上传作业
+                                    <input type="file" name="file" class="layui-input" onchange="UploadHomework(this,$!judgement.id)">
+                                </span>
+                            #else
+                                已经截止
+                            #end
+                        </td>
+                    </tr>
+                    #end
+                </tbody>
+
+        </table>
+    </div>
+</section>
+
+
+</body>
+<script src="/static/layui/layui.js"></script>
+<script>
+    layui.use('layedit', function () {
+        var layedit = layui.layedit;
+        layedit.build('demo', {
+            tool: ['strong' //加粗
+                , 'italic' //斜体
+                , 'underline' //下划线
+                , 'del' //删除线
+
+                , '|' //分割线
+
+                , 'left' //左对齐
+                , 'center' //居中对齐
+                , 'right' //右对齐
+                , 'link' //超链接
+                , 'unlink' //清除链接
+                , 'face' //表情
+            ]
+        }); //建立编辑器
+    });
+
+    function UploadHomework(input,judgementId) {
+        var fileObj = input.files[0]; // 获取文件对象
+        if(fileObj != null){
+            // FormData 对象
+            var form = new FormData();
+            form.append("judgementId", judgementId);                        // 可以增加表单数据
+            form.append("file", fileObj);
+            $.ajax({
+                url:"/teacher/homework/uploadHomework",
+                type:"post",
+                data:form,
+                dataType: "json",
+                success:function (res) {
+                    if(res.status == 0) {
+                        layer.alert(res.msg,function(){
+                            layer.closeAll();
+                            window.location.reload();
+                        });
+                    } else {
+                        layer.alert(res.msg);
+                    }
+                },
+                // 告诉jQuery不要去处理发送的数据
+                processData : false,
+                // 告诉jQuery不要去设置Content-Type请求头
+                contentType : false
+            })
+        }
+
+    }
+</script>
+</html>

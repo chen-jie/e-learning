@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-learning</title>
+
+    #parse("common/head.vm")
+    <style type="text/css">
+        .header {
+            top: 0;
+            box-shadow: 0 1px 12px rgba(16, 6, 25, 0.2);
+            z-index: 999;
+        }
+
+        .main {
+            width: 1185px;
+            min-height: 342px;
+            margin: 4rem auto 4.2rem;
+            padding: 1rem 3.25rem 1.2rem;
+            background: #ffffff;
+        }
+
+        .main .layui-form-pane .layui-form-label {
+            line-height: 32px;
+        }
+
+        .main .layui-input, .layui-btn-big {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .main .layui-btn {
+            background-color: #1BAAE6;
+        }
+
+        .footer {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+<div class="layui-clear" style="padding: 5px;border-bottom: 1px solid #ccc;background-color: #f8f8f8;">
+    <div style="width: 180px;padding-right:15px;border-right: 1px solid #ccc;float: left;text-align: center;">
+        <img src="$course.poster" width="70%;" height="50px;">
+    </div>
+    <div style="float: left;padding: 10px;">
+        <h4 class="" style="font-weight: bold">$!course.courseName</h4>
+        <p style="color:red;">$!course.teacherName</p>
+    </div>
+</div>
+<section>
+    <div style="float: left;">
+        <ul class="layui-nav layui-nav-tree" lay-filter="test" style="height: 300px;">
+            <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+            <li class="layui-nav-item layui-nav-itemed"><a href="/teacher/course/content/$!course.id">课程内容</a></li>
+            <li class="layui-nav-item"><a href="/teacher/homework/$!course.id">课程作业</a></li>
+            <li class="layui-nav-item"><a href="/teacher/topic/$!course.id/0">讨论区</a></li>
+        </ul>
+    </div>
+        <div style="border: 1px solid #f5dcdc;width: auto;margin-left:200px;padding:10px;">
+            #if($user.roleId == 2)
+                <div class="layui-btn-group" style="margin-bottom: 5px;">
+                    <button class="layui-btn" id="btn-edit">编辑</button>
+                    <button class="layui-btn" onclick="addChapter('')">新增章节</button>
+                    <button class="layui-btn" id="btn-refresh">刷新</button>
+                </div>
+            #end
+            <div class="layui-collapse">
+                #foreach($node in $chapters)
+                    #set($children = $node.children)
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title">$!node.title
+                            <span class="toggle-things layui-hide" style="float:right">
+                                <button class="layui-btn" onclick="addChapter('$!node.id')">
+                                    <i class="layui-icon">&#xe654;</i>
+                                </button>
+                                <button class="layui-btn layui-btn-danger" onclick="deleteChapter('$!node.id',1)">
+                                    <i class="layui-icon">&#x1006;</i>
+                                </button>
+                                <button class="layui-btn layui-btn-normal" onclick="addHomework('$!node.id')">
+                                                    布置作业
+                                                </button>
+                            </span>
+                        </h2>
+                        #if($children)
+                            #foreach($chNode in $children)
+                                <div class="layui-colla-content layui-show">
+                                        <div>
+                                            <span class="toggle-things layui-hide" style="float: right;margin-top:-9px;">
+                                                <button class="layui-btn layui-btn-danger" onclick="deleteChapter('$!chNode.id')">
+                                                    <i class="layui-icon">&#x1006;</i>
+                                                </button>
+                                                <button class="layui-btn layui-btn-normal" onclick="addHomework('$!chNode.id')">
+                                                    布置作业
+                                                </button>
+                                            </span>
+                                            <a href="/student/chapter/show/$!chNode.id" target="_blank">
+                                            $!chNode.title
+                                                </a>
+                                        </div>
+                                </div>
+                            #end
+                        #end
+                        #set($children = "")
+                    </div>
+                #end
+            </div>
+        </div>
+</section>
+
+
+</body>
+<script src="/static/layui/layui.js"></script>
+<script inline="javascript">
+    layui.use('element', function(){
+        var element = layui.element();
+    });
+    function layer_show(title, url, id, w, h) {
+        if (title == null || title == '') {
+            title = false;
+        }
+        ;
+        if (w == null || w == '') {
+            w = 700;
+        }
+        ;
+        if (h == null || h == '') {
+            h = ($(window).height() - 600);
+        }
+        ;
+        w=650;
+        h=500;
+        layer.open({
+            type: 2,
+            area: [w + 'px', h + 'px'],
+            fix: false,
+            maxmin: true,
+            shade: false,
+            title: title,
+            content: url
+        });
+    };
+    function editCourse(id) {
+        layer_show("编辑", "/teacher/course/toEdit/" + id, '', 600, 600);
+    }
+    function deleteChapter(id,isParent) {
+        var msg = "确定要删除吗?";
+        if(isParent){
+            msg+="<br>该章节下的所有子课时将会被一并删除！"
+        }
+        layer.confirm(msg,{icon:3,title:'提示'},function(){
+            $.post("/teacher/chapter/delete/"+id,function (res) {
+                if(res.status === 0) {
+                    layer.alert(res.msg,function(){
+                        layer.closeAll();
+                        window.location.reload();
+                    });
+                } else {
+                    layer.alert(res.msg);
+                }
+            },'json');
+        })
+    }
+    function addChapter(parentId){
+        var msg;
+        if(parentId){
+            msg = "添加课时"
+        }else{
+            msg = "新增章节"
+        }
+        layer_show(msg, '/teacher/chapter/toAdd?parentId='+parentId+'&courseId=$!course.id', '', 600, 600);
+    }
+    function addHomework(chapterId){
+        layer_show('布置作业', '/teacher/homework/toAdd?chapterId='+chapterId+'&courseId=$!course.id', '', 600, 600);
+    }
+    $(document).ready(function () {
+        $("#btn-refresh").on('click', function () {
+            window.location.reload();
+        });
+        $("#btn-edit").on('click', function () {
+            if($('.toggle-things').hasClass('layui-hide')){
+                $('.toggle-things').removeClass("layui-hide");
+                $("#btn-edit").html("√");
+            }else{
+                $('.toggle-things').addClass("layui-hide");
+                $("#btn-edit").html("编辑");
+            }
+        });
+    });
+
+</script>
+</html>

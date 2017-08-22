@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>注册</title>
+    #parse("common/head.vm")
+    <style type="text/css">
+    .header {top: 0; box-shadow: 0 1px 12px rgba(16, 6, 25, 0.2); z-index: 999;}
+    .main {width: 450px; min-height: 342px; margin: 4rem auto 4.2rem; padding: 1rem 3.25rem 1.2rem; background: #ffffff;}
+    .main .layui-form-pane .layui-form-label {height:50px;line-height: 32px;}
+    .main .layui-input,.layui-btn-big {height: 50px; line-height: 50px;}
+    .main .layui-btn {background-color: #1BAAE6;}
+    .footer {background-color: #ffffff;}
+    </style>
+</head>
+
+<body>
+<section style="background: #e5e8ec;overflow: hidden;">
+    <div class="main layui-clear">
+        <h2 class="page-title">添加教师</h2>
+        <div class="layui-form layui-form-pane">
+            <form method="post">
+                <div class="layui-form-item">
+                    <label for="L_username" class="layui-form-label">用户名</label>
+                    <div class="layui-input-block">
+                        <input type="text" onblur="ajaxValidate('/validateUsername',this)" id="L_username" name="username" placeholder="用户名" required lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_email" class="layui-form-label">邮箱</label>
+                    <div class="layui-input-block">
+                        <input type="text" onblur="ajaxValidate('/validateEmail',this)" id="L_email" name="email" placeholder="电子邮箱" required lay-verify="email" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_nickName" class="layui-form-label">教师姓名</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="L_nickName" name="nickname" placeholder="教师姓名" required lay-verify="required" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="L_pass" class="layui-form-label">密码</label>
+                    <div class="layui-input-block">
+                        <input type="input" id="L_pass" name="password" placeholder="密码" required lay-verify="pass" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div  class="layui-form-item">
+                    <button class="layui-btn layui-btn-big" style="width: 100%" lay-filter="*" lay-submit>立即注册</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+</body>
+<script src="/static/layui/layui.js"></script>
+<script inline="javascript">
+
+layui.use(['layer', 'element', 'form'], function(){
+    var $ = layui.jquery
+    ,layer = layui.layer
+    ,element = layui.element()
+    ,form = layui.form();
+    
+    //表单提交
+	form.on('submit(*)', function(data){
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            data: data.field,
+            url: '/admin/teacher/add',
+            success: function(res){
+                if(res.status === 0) {
+                    layer.alert('注册成功!',{icon:1},function(){
+                        window.location.reload();
+                    });
+                } else {
+                    layer.alert(res.msg,{icon:2});
+                    changeImg();
+                    $('#L_code').val("");
+                }
+            }, error: function(e){
+                layer.msg('请求异常，请重试', {shift: 6});
+            }
+        });
+	    return false;
+	});
+    
+    form.verify({
+        pass: [
+            /^[\S]{6,12}$/
+            ,'密码必须6到12位，且不能出现空格'
+        ]
+        ,repass: function(value){
+            if(!/^[\S]{6,12}$/.test(value)){
+                return '确认密码必须6到12位，且不能出现空格';
+            }
+            if(value != $('#L_pass').val()){
+                return '两次输入的密码不一致';
+            }
+        }
+    });
+});
+    function ajaxValidate(url,obj){
+        var key = $(obj).attr("name");
+        var value = $(obj).val();
+        var data;
+        if(key == 'username'){
+            data = {username:value};
+        }else if(key == 'email'){
+            data = {email:value};
+        }else if(key == 'nickname'){
+            data = {nickname:value};
+        }
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            data: data,
+            url: url,
+            success: function(res){
+                if(res.status === 1) {
+                    layer.msg(res.msg);
+                }
+            }, error: function(e){
+                layer.msg('请求异常，请重试', {shift: 6});
+            }
+        });
+    }
+</script>
+</html>

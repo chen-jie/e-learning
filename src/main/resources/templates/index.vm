@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-learning</title>
+    
+    #parse("common/head.vm")
+    <style type="text/css">
+    .header {top: 0; box-shadow: 0 1px 12px rgba(16, 6, 25, 0.2); z-index: 999;}
+    .main { min-height: 342px; margin: 1rem auto 4.2rem; padding: 1rem 3.25rem 1.2rem; background: #ffffff;}
+    .main .layui-form-pane .layui-form-label {line-height: 32px;}
+    .main .layui-input,.layui-btn-big {height: 50px; line-height: 50px;}
+    .main .layui-btn {background-color: #1BAAE6;}
+    .footer {background-color: #ffffff;}
+    </style>
+</head>
+
+<body>
+#parse("common/nav.vm")
+<section style="background: #e5e8ec;overflow: hidden;padding-top: 65px;">
+    <div class="main layui-clear">
+        <div>
+            <ul class="course-ul">
+                #foreach($course in $list)
+                    <li>
+                        <div class="course-wrap">
+                            <section class="course-img">
+                                <a href="/course/detail/$course.id" target="_blank">
+                                    <img xsrc="$course.poster" src="$course.poster" class="img-responsive" alt="">
+                                </a>
+                            </section>
+                            <div class="coure-bg-g">
+                                <h3 class="hLh30 txtOf mt10">
+                                    <a href="/course/detail/$course.id" target="_blank" title="$course.courseName" class="course-title fsize18 c-333">$course.courseName</a>
+                                </h3>
+                                <section class="mt10 hLh20 of">
+                                    <span class="fr"><tt class="font-red">主讲人：$course.teacherName</tt></span>
+								<span class="fl jgAttr c-ccc f-fA">
+									<tt class="c-999 f-fA mr10">$course.studentCount人在学</tt>
+								</span>
+                                </section>
+                            </div>
+                        </div>
+                    </li>
+                #end
+            </ul>
+        </div>
+    </div>
+</section>
+
+#parse("common/footer.vm")
+</body>
+<script src="/static/layui/layui.js"></script>
+<script inline="javascript">
+layui.use(['layer', 'element', 'form'], function(){
+    var $ = layui.jquery
+    ,layer = layui.layer
+    ,element = layui.element()
+    ,form = layui.form()
+    
+    //表单提交
+	form.on('submit(*)', function(data){
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            data: data.field,
+            url: '/login',
+            success: function(res){
+                if(res.status === 0) {
+                    window.location.href="/";
+                } else {
+                    layer.msg(res.msg||res.code, {shift: 6});
+                    changeImg();
+                    $('#L_code').val("");
+                }
+            }, error: function(e){
+                options.error || layer.msg('请求异常，请重试', {shift: 6});
+            }
+        });
+		return false;
+	});
+});
+
+</script>
+</html>

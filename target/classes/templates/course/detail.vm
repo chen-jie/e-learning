@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-learning</title>
+
+    #parse("common/head.vm")
+    <style type="text/css">
+        .header {
+            top: 0;
+            box-shadow: 0 1px 12px rgba(16, 6, 25, 0.2);
+            z-index: 999;
+        }
+
+        .main {
+            width: 90%;
+            min-height: 342px;
+            margin: 4rem 20px 4.2rem;
+            padding: 1rem 3.25rem 1.2rem;
+            background: #ffffff;
+        }
+
+        .main .layui-form-pane .layui-form-label {
+            line-height: 32px;
+        }
+
+        .main .layui-input, .layui-btn-big {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .main .layui-btn {
+            background-color: #1BAAE6;
+        }
+
+        .footer {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    #parse("common/nav.vm")
+<section style="background: #e5e8ec;overflow: hidden;padding-top: 65px;">
+    <div class="main layui-clear">
+        <div class="content-block-6">
+            <img src="$course.poster" style="width: 100%;
+    height: 300px;"/>
+        </div>
+        <div class="content-block-4">
+            <div class="course-detail-container">
+                <h1 class="h1">$course.courseName</h1>
+                <hr/>
+                <div class="c-666 mt-20">
+                    <div class="content-block-5"><i class="layui-icon">&#xe612;学习人数：$course.studentCount</i></div>
+                    <div class="content-block-5"><i class="layui-icon">&#xe637;开课时间：$date.format('yyyy-MM-dd',$course.createDate)</i></div>
+                </div>
+                <br/>
+                <br/>
+                <hr/>
+                <div class="c-999 mt-20 f-20">
+                    主讲人：$course.teacherName
+                </div>
+                <hr/>
+                <div class="mt-40">
+                    #if($!course.teacherId == $!user.id)
+                        <a href="/teacher/course/content/$course.id" class="layui-btn layui-btn-warm layui-btn-big">查看课程内容</a>
+                    #elseif($isSelected == false)
+                        <a href="/course/apply/$course.id" class="layui-btn layui-btn-big">参加课程</a>
+                    #elseif($isSelected == true)
+                        <a href="/teacher/course/content/$course.id" class="layui-btn layui-btn-warm layui-btn-big">已参加课程，进入学习</a>
+                    #end
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-50 layui-clear" style="margin-left: 20px;">
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">课程简介</li>
+                <li>课程大纲</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">$!course.description</div>
+                <div class="layui-tab-item">内容2</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    #parse("common/footer.vm")
+</body>
+<script src="/static/layui/layui.js"></script>
+<script inline="javascript">
+    layui.use(['layer', 'element', 'form'], function () {
+        var $ = layui.jquery
+                , layer = layui.layer
+                , element = layui.element();
+
+    });
+
+</script>
+</html>

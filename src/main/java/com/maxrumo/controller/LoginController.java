@@ -1,7 +1,9 @@
 package com.maxrumo.controller;
 
-import java.util.Map;
-
+import com.maxrumo.entity.User;
+import com.maxrumo.service.UserService;
+import com.maxrumo.shiro.realm.MyShiroRealm;
+import com.maxrumo.util.Constant;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.shiro.SecurityUtils;
@@ -16,10 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.maxrumo.entity.User;
-import com.maxrumo.service.UserService;
-import com.maxrumo.shiro.realm.MyShiroRealm;
-import com.maxrumo.util.Constant;
+import java.util.Map;
 
 @Controller
 public class LoginController extends BaseController{
@@ -43,6 +42,7 @@ public class LoginController extends BaseController{
         		return success("无须重复登录");
         	}
         	subject.login(token);
+            session.setAttribute(Constant.SESSION_USER,subject.getPrincipal());
             return success("登录成功");
         }catch (Exception e){
             return fail("用户名或密码错误");

@@ -1,11 +1,7 @@
 package com.maxrumo.shiro.config;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-import javax.servlet.Filter;
-
+import com.maxrumo.shiro.filter.CustomAuthorizationFilter;
+import com.maxrumo.shiro.realm.MyShiroRealm;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
@@ -19,8 +15,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.web.filter.DelegatingFilterProxy;
 
-import com.maxrumo.shiro.filter.CustomAuthorizationFilter;
-import com.maxrumo.shiro.realm.MyShiroRealm;
+import javax.servlet.Filter;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Shiro 配置
@@ -101,20 +99,22 @@ public class ShiroConfiguration {
         HashMap<String, Filter> filters = new LinkedHashMap<String, Filter>();
         filters.put("customperms", new CustomAuthorizationFilter());
         shiroFilterFactoryBean.setFilters(filters);
-        filterChainDefinitionMap.put("/favicon.ico", "anon"); 		//网站图标
-        filterChainDefinitionMap.put("/vcode", "anon");				//验证码
-        filterChainDefinitionMap.put("/login", "anon");
-        filterChainDefinitionMap.put("/toLogin", "anon");  			//登录页面
-        filterChainDefinitionMap.put("/logout", "authc");
-        filterChainDefinitionMap.put("/toReg", "anon");  			//注册页面
-        filterChainDefinitionMap.put("/register", "anon");    		//注册请求地址
-        filterChainDefinitionMap.put("/validate*", "anon");    		//注册ajax请求验证
-        filterChainDefinitionMap.put("/", "authc");					//登录才能查看首页
-        filterChainDefinitionMap.put("/index", "authc");
-        filterChainDefinitionMap.put("/error/**", "anon");			//错误页面
-        filterChainDefinitionMap.put("/druid/**", "anon");			//德鲁伊连接池监控地址
-        filterChainDefinitionMap.put("/static/**", "anon"); 		//静态资源
-        filterChainDefinitionMap.put("/**", "authc,customperms");	//其他地址需要登录，且验证权限
+//        filterChainDefinitionMap.put("/favicon.ico", "anon"); 		//网站图标
+//        filterChainDefinitionMap.put("/vcode", "anon");				//验证码
+//        filterChainDefinitionMap.put("/login", "anon");
+//        filterChainDefinitionMap.put("/toLogin", "anon");  			//登录页面
+//        filterChainDefinitionMap.put("/logout", "authc");
+//        filterChainDefinitionMap.put("/toReg", "anon");  			//注册页面
+//        filterChainDefinitionMap.put("/register", "anon");    		//注册请求地址
+//        filterChainDefinitionMap.put("/validate*", "anon");    		//注册ajax请求验证
+//        filterChainDefinitionMap.put("/", "authc");					//登录才能查看首页
+//        filterChainDefinitionMap.put("/index", "authc");
+//        filterChainDefinitionMap.put("/error/**", "anon");			//错误页面
+//        filterChainDefinitionMap.put("/druid/**", "anon");			//德鲁伊连接池监控地址
+//        filterChainDefinitionMap.put("/static/**", "anon"); 		//静态资源//        filterChainDefinitionMap.put("/static/**", "anon"); 		//静态资源
+//        filterChainDefinitionMap.put("/**", "authc,customperms");	//其他地址需要登录，且验证权限
+//        filterChainDefinitionMap.put("/upload/**", "anon"); 		//静态资源
+        filterChainDefinitionMap.put("/**", "anon");	//其他地址需要登录，且验证权限
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
     }

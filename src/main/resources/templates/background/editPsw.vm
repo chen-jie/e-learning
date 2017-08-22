@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/static/css/index.css"/>
+    #parse("./common/head.vm")
+    <title>修改密码</title>
+    <style>
+        .my-define-file {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 8px 15px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .my-define-file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .my-define-file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="pd-20 user-add">
+    <form class="layui-form layui-form-pane" action="/background/edit" method="post">
+        #if($!msg)
+            <script>
+                layer.alert('$msg');
+            </script>
+        #end
+        <div class="layui-form-item">
+            <label class="layui-form-label">原密码</label>
+            <div class="layui-input-inline">
+                <input type="password" name="opassword" required lay-filter="title" lay-verify="title"
+                       autocomplete="off" placeholder="请输入原密码" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">新密码</label>
+            <div class="layui-input-inline">
+                <input type="password" name="password" id="L_pass" required lay-filter="title" lay-verify="pass"
+                       autocomplete="off" placeholder="请输入新密码" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">再次输入</label>
+            <div class="layui-input-inline">
+                <input type="password" name="title" required lay-filter="title" lay-verify="repass"
+                       autocomplete="off" placeholder="再次输入密码" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-inline">
+                <button class="layui-btn layui-btn-big" style="width: 100%" lay-filter="*" lay-submit>立即修改</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="/static/layui/layui.js"></script>
+<script>
+    layui.use(['layer', 'element', 'form'], function(){
+        var $ = layui.jquery
+                ,layer = layui.layer
+                ,element = layui.element()
+                ,form = layui.form();
+
+        //表单提交
+        form.on('submit(*)', function(data){
+            $.ajax({
+                type: 'post',
+                dataType: 'json',
+                data: data.field,
+                url: '/background/edit',
+                success: function(res){
+                    if(res.status === 0) {
+                        layer.alert(res.msg,{icon:1},function(){
+                            window.location.reload();
+                        });
+                    } else {
+                        layer.alert(res.msg,{icon:2});
+                    }
+                }, error: function(e){
+                    layer.msg('请求异常，请重试', {shift: 6});
+                }
+            });
+            return false;
+        });
+
+        form.verify({
+            pass: [
+                /^[\S]{6,12}$/
+                ,'密码必须6到12位，且不能出现空格'
+            ]
+            ,repass: function(value){
+                if(!/^[\S]{6,12}$/.test(value)){
+                    return '确认密码必须6到12位，且不能出现空格';
+                }
+                if(value != $('#L_pass').val()){
+                    return '两次输入的密码不一致';
+                }
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

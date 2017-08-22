@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maxrumo.mapper.JudgementMapper">
+  <resultMap id="BaseResultMap" type="com.maxrumo.entity.Judgement">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="homework_id" jdbcType="INTEGER" property="homeworkId" />
+    <result column="student_id" jdbcType="INTEGER" property="studentId" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="homework_url" jdbcType="VARCHAR" property="homeworkUrl" />
+    <result column="create_time" jdbcType="DATE" property="createTime" />
+    <result column="review" jdbcType="VARCHAR" property="review" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, homework_id, student_id, score, status, homework_url, create_time, review
+  </sql>
+  <select id="selectByExample" parameterType="com.maxrumo.entity.JudgementExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'false' as QUERYID,
+    <include refid="Base_Column_List" />
+    from judgement
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from judgement
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from judgement
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.maxrumo.entity.Judgement">
+    insert into judgement (id, homework_id, student_id, 
+      score, status, homework_url, 
+      create_time, review)
+    values (#{id,jdbcType=INTEGER}, #{homeworkId,jdbcType=INTEGER}, #{studentId,jdbcType=INTEGER}, 
+      #{score,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{homeworkUrl,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=DATE}, #{review,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.maxrumo.entity.Judgement">
+    insert into judgement
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="homeworkId != null">
+        homework_id,
+      </if>
+      <if test="studentId != null">
+        student_id,
+      </if>
+      <if test="score != null">
+        score,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="homeworkUrl != null">
+        homework_url,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="review != null">
+        review,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="homeworkId != null">
+        #{homeworkId,jdbcType=INTEGER},
+      </if>
+      <if test="studentId != null">
+        #{studentId,jdbcType=INTEGER},
+      </if>
+      <if test="score != null">
+        #{score,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="homeworkUrl != null">
+        #{homeworkUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=DATE},
+      </if>
+      <if test="review != null">
+        #{review,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.maxrumo.entity.JudgementExample" resultType="java.lang.Integer">
+    select count(*) from judgement
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByPrimaryKeySelective" parameterType="com.maxrumo.entity.Judgement">
+    update judgement
+    <set>
+      <if test="homeworkId != null">
+        homework_id = #{homeworkId,jdbcType=INTEGER},
+      </if>
+      <if test="studentId != null">
+        student_id = #{studentId,jdbcType=INTEGER},
+      </if>
+      <if test="score != null">
+        score = #{score,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="homeworkUrl != null">
+        homework_url = #{homeworkUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=DATE},
+      </if>
+      <if test="review != null">
+        review = #{review,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.maxrumo.entity.Judgement">
+    update judgement
+    set homework_id = #{homeworkId,jdbcType=INTEGER},
+      student_id = #{studentId,jdbcType=INTEGER},
+      score = #{score,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      homework_url = #{homeworkUrl,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=DATE},
+      review = #{review,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

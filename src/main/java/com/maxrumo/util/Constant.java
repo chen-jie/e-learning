@@ -12,4 +12,6 @@ public class Constant {
     public static final String ROLE_TEACHER = "teacher";
     
     public static final String ROLE_ADMIN = "admin";
+
+    public static final String  SESSION_USER = "user";
 }

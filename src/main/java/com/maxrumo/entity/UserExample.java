@@ -394,6 +394,10 @@ public class UserExample {
             return (Criteria) this;
         }
 
+        public Criteria andRoleIdNotEqualTo(Integer value) {
+            addCriterion("role_id <>", value, "role_id");
+            return (Criteria) this;
+        }
         public Criteria andEmailGreaterThan(String value) {
             addCriterion("email >", value, "email");
             return (Criteria) this;

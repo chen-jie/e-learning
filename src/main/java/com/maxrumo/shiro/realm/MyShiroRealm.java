@@ -1,26 +1,21 @@
 package com.maxrumo.shiro.realm;
 
-import java.util.List;
-
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.lang.StringUtils;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.SimpleAuthenticationInfo;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.authz.AuthorizationInfo;
-import org.apache.shiro.authz.SimpleAuthorizationInfo;
-import org.apache.shiro.realm.AuthorizingRealm;
-import org.apache.shiro.subject.PrincipalCollection;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.maxrumo.entity.Permission;
 import com.maxrumo.entity.Role;
 import com.maxrumo.entity.User;
 import com.maxrumo.service.PermissionService;
 import com.maxrumo.service.RoleService;
 import com.maxrumo.service.UserService;
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang.StringUtils;
+import org.apache.shiro.authc.*;
+import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
+import org.apache.shiro.realm.AuthorizingRealm;
+import org.apache.shiro.subject.PrincipalCollection;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 /**
  * 自定义realm，授权和认证时调用
@@ -56,7 +51,7 @@ public class MyShiroRealm extends AuthorizingRealm {
 		if (user == null) {
 			return null;
 		}
-		return new SimpleAuthenticationInfo(user.getUsername(),
+		return new SimpleAuthenticationInfo(user,
 				user.getPassword(), getName());
 	}
 	
@@ -72,15 +67,17 @@ public class MyShiroRealm extends AuthorizingRealm {
 		// 当前需要校验权限的用户
 		String username = (String) principals.getPrimaryPrincipal();
 
+		User user = userService.findByUsername(username);
+		int roleId = user.getRoleId();
 		// 用户属于的角色
-		List<Role> roles = roleService.findRoleByUsername(username);
+		Role role = roleService.findById(roleId);
 		// 用户拥有的权限
-		List<Permission> permissions = permissionService.findByUsername(username);
+//		List<Permission> permissions = permissionService.findByRoleId(roleId);
 
 		SimpleAuthorizationInfo simpleAuthorizationInfo = new SimpleAuthorizationInfo();
-
+		simpleAuthorizationInfo.addRole(role.getEnName());
 		// 将查询出来的角色和权限交给shiro管理
-		addRoleAndPermission(simpleAuthorizationInfo, roles, permissions);
+//		addRoleAndPermission(simpleAuthorizationInfo, Arrays.asList(role), null);
 		
 		return simpleAuthorizationInfo;
 	}
